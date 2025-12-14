@@ -1,0 +1,74 @@
+[
+  {
+    "id": "1",
+    "name": "CRM",
+    "title": "Administra interacciones y datos de clientes.",
+    "description": "Un sistema diseñado para gestionar relaciones con clientes, ayudando a las empresas a mejorar la comunicación, organizar información y aumentar la productividad del equipo de ventas."
+  },
+  {
+    "id": "2",
+    "name": "Plataforma de E-commerce",
+    "title": "Vende productos en línea fácilmente.",
+    "description": "Una plataforma que facilita la creación y gestión de tiendas en línea, permitiendo a los usuarios vender productos, gestionar inventarios, y procesar pagos de manera segura."
+  },
+  {
+    "id": "3",
+    "name": "Sistema de Reservas",
+    "title": "Gestiona reservas y citas fácilmente.",
+    "description": "Herramienta que permite a los negocios gestionar reservas y citas, optimizando la disponibilidad y mejorando la experiencia del cliente con recordatorios automáticos y opciones de confirmación."
+  },
+  {
+    "id": "4",
+    "name": "Software de Contabilidad",
+    "title": "Registra y analiza transacciones financieras.",
+    "description": "Un sistema integral para registrar y analizar transacciones financieras, facilitando la creación de reportes financieros y la toma de decisiones informadas basadas en datos precisos."
+  },
+  {
+    "id": "5",
+    "name": "Sistema de Facturación Electrónica",
+    "title": "Emite facturas electrónicas legalmente.",
+    "description": "Solución que permite la emisión de facturas electrónicas cumpliendo con normativas legales, simplificando el proceso de facturación y reduciendo errores administrativos."
+  },
+  {
+    "id": "6",
+    "name": "Plataforma de Delivery de Comida",
+    "title": "Ordena comida de restaurantes cercanos.",
+    "description": "Aplicación que conecta a los usuarios con restaurantes locales, permitiendo realizar pedidos de comida a domicilio de manera rápida y sencilla con seguimiento en tiempo real."
+  },
+  {
+    "id": "7",
+    "name": "Software de Gestión Educativa",
+    "title": "Administra colegios y universidades eficientemente.",
+    "description": "Sistema diseñado para gestionar instituciones educativas, facilitando la administración de estudiantes, personal, cursos, y actividades, mejorando la eficiencia operativa."
+  },
+  {
+    "id": "8",
+    "name": "Marketplace Local",
+    "title": "Compra y vende productos locales.",
+    "description": "Plataforma que permite a los usuarios comprar y vender productos dentro de su comunidad, fomentando el comercio local y ofreciendo una variedad de productos accesibles."
+  },
+  {
+    "id": "9",
+    "name": "Sistema de Turnos Médicos",
+    "title": "Reserva citas médicas fácilmente.",
+    "description": "Herramienta que permite a los pacientes reservar citas médicas de manera eficiente, gestionando la disponibilidad de médicos y facilitando la organización de las consultas."
+  },
+  {
+    "id": "10",
+    "name": "Gestión de Nómina y Recursos Humanos",
+    "title": "Administra pagos y empleados eficazmente.",
+    "description": "Sistema integral para gestionar nóminas y recursos humanos, facilitando la administración de salarios, beneficios, y el seguimiento del desempeño de los empleados."
+  },
+  {
+    "id": "11",
+    "name": "Plataforma de E-learning",
+    "title": "Accede a cursos y formación online.",
+    "description": "Aplicación que ofrece acceso a una amplia variedad de cursos en línea, permitiendo a los usuarios mejorar sus habilidades y conocimientos desde cualquier lugar."
+  },
+  {
+    "id": "12",
+    "name": "Sistema de Gestión de Inventarios",
+    "title": "Controla stock y productos eficientemente.",
+    "description": "Herramienta que facilita la gestión de inventarios, permitiendo controlar el stock de productos, optimizar el almacenamiento, y reducir pérdidas por caducidad o desabastecimiento."
+  }
+]

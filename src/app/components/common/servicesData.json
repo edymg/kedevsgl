@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "name": "CRM",
+    "title": "Administra interacciones y datos de clientes.",
+    "description": ""
+  },
+  {
+    "id": "2",
+    "name": "Plataforma de E-commerce",
+    "title": "Vende productos en línea fácilmente.",
+    "description": ""
+  },
+  {
+    "id": "3",
+    "name": "Sistema de Reservas",
+    "title": "Gestiona reservas y citas fácilmente.",
+    "description": ""
+  },
+  {
+    "id": "5",
+    "name": "Sistema de Facturación Electrónica",
+    "title": "Emite facturas electrónicas legalmente.",
+    "description": ""
+  },
+  {
+    "id": "6",
+    "name": "Plataforma de Delivery de Comida",
+    "title": "Ordena comida de restaurantes cercanos.",
+    "description": ""
+  },
+  {
+    "id": "7",
+    "name": "Software de Gestión Educativa",
+    "title": "Administra colegios y universidades eficientemente.",
+    "description": ""
+  },
+  {
+    "id": "10",
+    "name": "Gestión de Nómina y Recursos Humanos",
+    "title": "Administra pagos y empleados eficazmente.",
+    "description": ""
+  },
+  {
+    "id": "12",
+    "name": "Sistema de Gestión de Inventarios",
+    "title": "Controla stock y productos eficientemente.",
+    "description": ""
+  }
+]

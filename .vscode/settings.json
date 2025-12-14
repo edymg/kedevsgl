@@ -1,0 +1,7 @@
+{
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "typescript.tsdk": "node_modules\\typescript\\lib",
+    "workbench.colorTheme": "Monokai Night",
+    "workbench.preferredDarkColorTheme": "One Dark Pro Mix"
+}
