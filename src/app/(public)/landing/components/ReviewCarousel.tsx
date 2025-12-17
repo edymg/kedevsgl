@@ -31,7 +31,7 @@ const reviews: Review[] = [
     company: "Movento S.A",
     avatar: "https://randomuser.me/api/portraits/men/1.jpg",
     rating: 5,
-    text: "El CRM nos permite organizar y entender mejor las necesidades de nuestros clientes , sin fallos. Eficiencia pura.",
+    text: "Hoy tenemos control total de nuestra operación comercial. El sistema evoluciona cada mes sin depender de un solo programador.",
   },
   {
     id: 3,
