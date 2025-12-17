@@ -94,8 +94,8 @@ export default function Formulary() {
           autoComplete="on"
           className="space-y-2"
         >
-          <h2 className="text-2xl font-semibold text-center text-[#10B981]">
-            ¡Convierte tu Idea en Software!
+          <h2 className="text-2xl font-semibold text-center text-turqueza-letter-light capitalize">
+            ¡Solicita una consultoría técnica estratégica!
           </h2>
 
           <Stack spacing={1} className="grid grid-cols-1 md:grid-cols-2">
