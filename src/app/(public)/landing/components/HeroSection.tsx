@@ -25,9 +25,9 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black bg-opacity-70"></div>
 
       <div className="relative z-10 text-center max-w-3xl px-6">
-        <h1 className="text-4xl md:text-6xl font-bold capitalize">
+        <h1 className="text-4xl md:text-6xl font-bold capitalize mt-4">
           Cuando tu software falla,{" "}
-          <span className="text-[#10B981]">tu negocio pierde dinero.</span>
+          <span className="text-[#10B981]">tu negocio pierde dinero</span>
         </h1>
         <p className="text-lg mt-4">
           Kedevs se encarga de que eso no pase. Partner técnico mensual para
@@ -42,14 +42,17 @@ const HeroSection = () => {
           <StarRating rating={4.7} /> {/* from 1 to 5 */}
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8 text-sm">
+        <div className="flex flex-col gap-6 justify-center pt-4 text-sm">
           <div className="flex items-center gap-2 text-muted-foreground">
             <CheckCircle className="w-5 h-5 text-[#10B981]" />
-            <span>{"Hoja de Ruta Inicial Gratis"}</span>
+            <span>Diagnóstico técnico estratégico sin costo.</span>
           </div>
           <div className="flex items-center gap-2 text-muted-foreground">
             <CheckCircle className="w-5 h-5 text-[#10B981]" />
-            <span>{"Evaluación de Riesgos Incluida"}</span>
+            <span>
+              Identificamos riesgos operativos, cuellos de botella y
+              oportunidades de crecimiento en tu software.
+            </span>
           </div>
         </div>
       </div>
