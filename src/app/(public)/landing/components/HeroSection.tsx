@@ -25,13 +25,13 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black bg-opacity-70"></div>
 
       <div className="relative z-10 text-center max-w-3xl px-6">
-        <h1 className="text-4xl md:text-6xl font-bold">
-          Reactiva tu{" "}
-          <span className="text-[#10B981]">Software Estancando</span>
+        <h1 className="text-4xl md:text-6xl font-bold capitalize">
+          Cuando tu software falla,{" "}
+          <span className="text-[#10B981]">tu negocio pierde dinero.</span>
         </h1>
         <p className="text-lg mt-4">
-          Equipo técnico completo trabajando mensualmente para estabilizar,
-          mejorar y escalar tu plataforma sin contratar personal permanente.
+          Kedevs se encarga de que eso no pase. Partner técnico mensual para
+          empresas con ingresos recurrentes y plataformas críticas.
         </p>
 
         <div className="mt-6">
