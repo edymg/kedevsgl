@@ -1,11 +1,7 @@
 "use client";
-import { useState } from "react";
 import { motion } from "framer-motion";
 import ButtonContactModal from "./ButtonContactModal";
 import Image from "next/image";
-import Link from "next/link";
-import WrapperModal from "@/components/ui/WrapperModal";
-import Formulary from "./Formulary";
 
 const OurServices = () => {
   return (
@@ -19,8 +15,8 @@ const OurServices = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: false }}
       >
-        Ofrecemos <span className="text-green-letter">soluciones</span> para
-        potenciar tu empresa
+        Ofrecemos <span className="text-[#10B981]">Soluciones</span> para
+        Potenciar tu Empresa
       </motion.h2>
 
       <div className="flex flex-col gap-8 sm:gap-12">
@@ -40,13 +36,11 @@ const OurServices = () => {
           />
           <div className="w-full md:w-1/2 mt-4 md:mt-0">
             <h3 className="text-xl sm:text-2xl font-semibold">
-              Consultoría digital
+              Evolución continua del software
             </h3>
             <p className="text-gray-400 mt-2">
-              Detectamos las oportunidades de mejora en tu negocio y creamos una
-              estrategia digital alineada con tus objetivos. Con nuestra
-              experiencia, te ayudamos a optimizar tu presencia online y
-              transformar cada acción en resultados concretos.
+              Nos integramos como tu equipo técnico mensual para mantener,
+              mejorar y evolucionar tu plataforma sin interrupciones.
             </p>
             <div className="mt-4 sm:mt-6">
               <ButtonContactModal title="Optimiza tu negocio hoy" />
@@ -70,13 +64,11 @@ const OurServices = () => {
           />
           <div className="w-full md:w-1/2 mt-4 md:mt-0">
             <h3 className="text-xl sm:text-2xl font-semibold">
-              Escala inteligente
+              Control y reducción de riesgos
             </h3>
             <p className="text-gray-400 mt-2">
-              Impulsamos el crecimiento de tu empresa optimizando y modernizando
-              tus aplicaciones. Nuestro equipo especializado garantiza un
-              mantenimiento eficiente y el uso de tecnologías de vanguardia para
-              crear soluciones robustas y escalables.
+              Detectamos fallas, riesgos técnicos y cuellos de botella antes de
+              que impacten en ingresos u operación.
             </p>
             <div className="mt-4 sm:mt-6">
               <ButtonContactModal title="Moderniza tus aplicaciones" />
@@ -100,13 +92,11 @@ const OurServices = () => {
           />
           <div className="w-full md:w-1/2 mt-4 md:mt-0">
             <h3 className="text-xl sm:text-2xl font-semibold">
-              Procesos que vuelan
+              Escalabilidad y roadmap
             </h3>
             <p className="text-gray-400 mt-2">
-              Automatizamos y mejoramos la gestión de tu empresa con soluciones
-              tecnológicas personalizadas. Desarrollamos software a medida que
-              se adapta a tus necesidades, optimizando tiempos y reduciendo
-              costos operativos.
+              Definimos y ejecutamos un roadmap técnico alineado al crecimiento
+              del negocio, no a tareas sueltas.
             </p>
             <div className="mt-4 sm:mt-6">
               <ButtonContactModal title="Automatiza tus procesos" />
