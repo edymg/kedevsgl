@@ -13,9 +13,13 @@ const Partners = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: false, amount: 0.5 }}
       >
-        <span className="text-green-letter">Únete </span>a empresas que confían
-        en <span className="text-green-letter">Kedevs </span>para excelencia
-        técnica continua.
+        <span className="text-green-letter">Empresas </span>que operan con{" "}
+        <span className="text-green-letter capitalize">software </span>crítico y
+        confían su{" "}
+        <span className="text-green-letter capitalize">evolución </span> técnica
+        a <span className="text-green-letter">Kedevs</span>. Plataformas en{" "}
+        <span className="text-green-letter capitalize">producción</span>, no
+        proyectos experimentales.
       </motion.h2>
 
       <DiagonalBrandCarousel />
