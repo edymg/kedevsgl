@@ -11,7 +11,7 @@ const HeroSection = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <section className="relative w-full h-screen flex items-center justify-center text-white">
+    <section className="relative w-full h-screen flex items-center justify-center text-white font-montserrat">
       <video
         autoPlay
         loop
@@ -24,10 +24,10 @@ const HeroSection = () => {
 
       <div className="absolute inset-0 bg-black bg-opacity-70"></div>
 
-      <div className="relative z-10 text-center max-w-3xl px-6">
-        <h1 className="text-4xl md:text-6xl font-bold capitalize mt-4">
-          Cuando tu software falla,{" "}
-          <span className="text-[#10B981]">tu negocio pierde dinero</span>
+      <div className="relative z-10 text-center max-w-3xl">
+        <h1 className="text-4xl md:text-6xl font-bold sm:mt-8">
+          Cuando tu Software falla,{" "}
+          <span className="text-[#10B981]">tu Negocio pierde Dinero</span>
         </h1>
         <p className="text-lg mt-4">
           Kedevs se encarga de que eso no pase. Partner técnico mensual para
@@ -38,8 +38,8 @@ const HeroSection = () => {
           <ButtonContactModal title="Transformemos tu idea" />
         </div>
 
-        <div className="flex justify-center items-center gap-2 mt-4">
-          <StarRating rating={4.7} /> {/* from 1 to 5 */}
+        <div className="flex justify-center items-center gap-2 mt-8">
+          <StarRating rating={4.7} />
         </div>
 
         <div className="flex flex-col gap-6 justify-center pt-4 text-sm">

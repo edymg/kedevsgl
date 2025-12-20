@@ -77,7 +77,7 @@ export default function Formulary() {
       if (!response.ok) {
         throw new Error("Email failed to send from Contacts.");
       }
-      // setSnackbarOpen(true);
+
       methods.reset();
       console.log("Email sent successfully from contacts!");
     } finally {
@@ -108,11 +108,7 @@ export default function Formulary() {
               name="nameCompany"
               label="Nombre de la Empresa"
             />
-            {/* <RHFTextField<Schema>
-              name="emailEmpresa"
-              label="Email de la Empresa"
-              placeholder="empresa@email.ejm"
-            /> */}
+
             <div className="grid grid-cols-2 gap-4">
               <RHFAutocomplete<Schema>
                 name="countries"
@@ -148,13 +144,14 @@ export default function Formulary() {
             <div className="">
               <Typography
                 variant="body2"
+                fontSize="17px"
                 color="info"
-                align="justify"
-                sx={{ display: "block" }}
-                className="text-gray-500 dark:text-gray-300 "
+                align="center"
+                sx={{ display: "block", margin: "2px 0 2px 0" }}
+                className="text-gray-500 dark:text-gray-300"
               >
-                Proyectos desde USD 2,000 (PEN 7,500). ¿Pago completo o en
-                cuotas?
+                Trabajamos con empresas que invierten mensualmente en la
+                evolución de su software.
               </Typography>
               <RHFAutocomplete<Schema>
                 name="payOpt"

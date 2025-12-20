@@ -9,6 +9,7 @@ import WrapperModal from "@/components/ui/WrapperModal";
 import { ProjectInfo } from "./ProjectInfo";
 import useScrollActive from "@/hooks/useScrollActive";
 import { useActiveNavbarStore } from "@/store/activeNavbar";
+import AnimatedTitle from "./AnimatedTitle";
 
 export function Projects() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -27,24 +28,25 @@ export function Projects() {
   return (
     <>
       <section
-        className="relative py-24 px-4 sm:px-6 lg:px-8 min-h-screen scroll-mt-24"
+        className="relative py-24 px-4 sm:px-6 lg:px-8 min-h-screen scroll-mt-24 font-montserrat"
         id="gallery"
         ref={inputGalleryRef}
       >
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-20">
-            <h2 className="text-5xl sm:text-6xl font-bold tracking-tight mb-3">
-              <span className="text-green-letter">Software</span>{" "}
-              <span className="text-accent">Empresarial en Producción</span>
+            <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-3">
+              <span className="text-accent">
+                Plataformas en Producción que confian en
+              </span>{" "}
+              <AnimatedTitle />
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Casos reales de plataformas críticas que hoy operan, evolucionan y
-              escalan con un equipo técnico mensual
+            <p className="text-[20px] text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              Empresas que operan con software crítico y evolucionan
+              continuamente con nuestro acompañamiento técnico.
             </p>
           </div>
 
-          {/* Projects Grid - 4 columns responsive */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project) => (
               <div
@@ -106,7 +108,6 @@ export function Projects() {
                   <span className="text-[12px]">Ver más</span>
                   <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-0.5 transition-transform" />
                 </Button>
-                {/* <ButtonContactModal size="12" title="Ver más" /> */}
               </div>
             ))}
           </div>

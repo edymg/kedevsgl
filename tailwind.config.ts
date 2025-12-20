@@ -21,6 +21,9 @@ const config = {
       screens: {
         brake: "888px",
       },
+      fontFamily: {
+        montserrat: "Montserrat",
+      },
       colors: {
         "green-light": "#98ef98",
         "green-dark": "#67e967",
