@@ -1,12 +1,40 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+import { cn } from "@/lib/utils";
+
 gsap.registerPlugin(ScrollTrigger);
 
-export default function AnimatedTitle() {
+type TitleColor = "primary" | "secondary" | "default";
+
+const colorClasses: Record<TitleColor, string> = {
+  primary: "text-green-letter",
+  secondary: "text-turqueza-letter-light",
+  default: "text-white",
+};
+
+interface AnimatedTitleProps {
+  title: string;
+  color?: TitleColor;
+  className?: string;
+}
+
+/**
+ *
+ * @prop title @returns string
+ * @prop color  @returns paleta de colores de la landing page
+ * @prop className @returns para los demás estilos de tailwind
+ */
+
+export default function AnimatedTitle({
+  title,
+  color = "default",
+  className,
+}: AnimatedTitleProps) {
   const titleRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
@@ -39,14 +67,16 @@ export default function AnimatedTitle() {
     return () => ctx.revert();
   }, []);
 
-  const text = "Kedevs";
-
   return (
     <span
       ref={titleRef}
-      className="font-bold text-center inline-block text-green-letter font-montserrat"
+      className={cn(
+        "font-bold text-center inline-block font-montserrat",
+        colorClasses[color],
+        className
+      )}
     >
-      {text.split("").map((char, i) => (
+      {title.split("").map((char, i) => (
         <span key={i} className="inline-block opacity-0">
           {char === " " ? "\u00A0" : char}
         </span>

@@ -1,14 +1,21 @@
 "use client";
 
-import { ArrowRight } from "@/../node_modules/lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { projects } from "@/lib/project";
+
+import { ArrowRight } from "@/../node_modules/lucide-react";
+
 import { Button } from "@mui/material";
+
+import useScrollActive from "@/hooks/useScrollActive";
+
+import { useActiveNavbarStore } from "@/store/activeNavbar";
+
+import { projects } from "@/lib/project";
+
 import { Project } from "../types/project";
+
 import WrapperModal from "@/components/ui/WrapperModal";
 import { ProjectInfo } from "./ProjectInfo";
-import useScrollActive from "@/hooks/useScrollActive";
-import { useActiveNavbarStore } from "@/store/activeNavbar";
 import AnimatedTitle from "./AnimatedTitle";
 
 export function Projects() {
@@ -39,7 +46,7 @@ export function Projects() {
               <span className="text-accent">
                 Plataformas en Producción que confian en
               </span>{" "}
-              <AnimatedTitle />
+              <AnimatedTitle title="Kedevs" color="primary" />
             </h2>
             <p className="text-[20px] text-gray-700 max-w-3xl mx-auto leading-relaxed">
               Empresas que operan con software crítico y evolucionan
