@@ -1,9 +1,10 @@
 "use client";
 
-import ButtonContactModal from "./ButtonContactModal";
-import WrapperModal from "@/components/ui/WrapperModal";
-import Formulary from "./Formulary";
 import { useState } from "react";
+
+import WrapperModal from "@/components/ui/WrapperModal";
+import ButtonContactModal from "./ButtonContactModal";
+import Formulary from "./Formulary";
 
 export function FinalCTA() {
   const [open, setOpen] = useState(false);
@@ -18,7 +19,7 @@ export function FinalCTA() {
         Contáctanos hoy y descubre cómo podemos ayudarte.
       </p>
       <div className="mt-4 sm:mt-6">
-        <ButtonContactModal title="Solicita tu solución digital" />
+        <ButtonContactModal title="Agenda una evaluación técnica" />
       </div>
 
       <WrapperModal open={open} onOpen={onOpen}>

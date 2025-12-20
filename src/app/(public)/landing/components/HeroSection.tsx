@@ -1,11 +1,13 @@
 "use client";
 
-import ButtonContactModal from "./ButtonContactModal";
-import { StarRating } from "./StarsRating";
-import { CheckCircle } from "@mui/icons-material";
-import WrapperModal from "@/components/ui/WrapperModal";
-import Formulary from "./Formulary";
 import { useState } from "react";
+
+import { CheckCircle } from "@mui/icons-material";
+
+import WrapperModal from "@/components/ui/WrapperModal";
+import ButtonContactModal from "./ButtonContactModal";
+import Formulary from "./Formulary";
+import { StarRating } from "./StarsRating";
 
 const HeroSection = () => {
   const [open, setOpen] = useState(false);
@@ -35,7 +37,7 @@ const HeroSection = () => {
         </p>
 
         <div className="mt-6">
-          <ButtonContactModal title="Transformemos tu idea" />
+          <ButtonContactModal title="Reactiva y escala tu software" />
         </div>
 
         <div className="flex justify-center items-center gap-2 mt-8">

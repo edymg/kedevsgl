@@ -1,8 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
+
 import { FormProvider, useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { Button, Stack, CircularProgress, Typography } from "@mui/material";
+
 import {
   schema,
   defaultValues,
@@ -10,11 +14,10 @@ import {
   countries,
   optionPay,
 } from "../types/schema";
-import { Button, Stack, CircularProgress, Typography } from "@mui/material";
+
 import { RHFAutocomplete } from "@/components/ui/Autocomplete";
 import { RHFTextField } from "@/components/ui/TextField";
 import { RHFSwitch } from "@/components/ui/Switch";
-import Image from "next/image";
 
 export default function Formulary() {
   const [isLoading, setIsLoading] = useState(false);
@@ -206,7 +209,7 @@ export default function Formulary() {
                 <CircularProgress size={30} color="inherit" />
               ) : (
                 <span className="relative z-10 font-bold drop-shadow-sm text-white">
-                  Enviar Mensaje
+                  Solicitar evaluación técnica
                 </span>
               )}
             </Button>
