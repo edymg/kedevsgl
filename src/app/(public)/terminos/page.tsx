@@ -1,9 +1,9 @@
-import React, { Children } from "react";
 import type { Metadata } from "next";
-import NavBar from "../landing/components/Navbar";
-import Footer from "../landing/components/Footer";
 
 import { Toaster } from "sonner";
+
+import NavBar from "../landing/components/Navbar";
+import Footer from "../landing/components/Footer";
 
 export const metadata: Metadata = {
   title: "Term and Conditions | Kedevs",
@@ -81,12 +81,12 @@ function page() {
                       uno de los sitios Web ubicados o vinculados a la URL{" "}
                     </strong>
                     <a
-                      href="https://www.kedevs.tech"
+                      href="https://www.kedevs.site"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hover:text-[#D2EA0A] transition-colors underline underline-offset-4 decoration-[#1fd856]/50 text-[#9ff0b7]"
                     >
-                      https://www.kedevs.tech
+                      https://www.kedevs.site
                     </a>
                     <strong>
                       {" "}
