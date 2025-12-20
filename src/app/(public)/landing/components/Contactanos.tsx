@@ -15,7 +15,7 @@ const renderIconOnline = (text: string) => {
         <span className="bg-turqueza-letter-light absolute inline-flex h-full w-full animate-ping rounded-full opacity-75 mt-2"></span>
         <span className="bg-turqueza-letter-light inline-flex h-2.5 w-2.5 rounded-full mt-2"></span>
       </span>
-      <li className="flex gap-2 text-lg text-gray-300">{text}</li>
+      <span className="flex gap-2 text-lg text-gray-300">{text}</span>
     </div>
   );
 };
@@ -28,7 +28,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="w-full flex justify-center font-montserrat">
+    <div id="contact" className="w-full flex justify-center font-montserrat">
       <section
         className="relative overflow-hidden shadow-xl sm:rounded-lg rounded-lg bg-gradient-to-b from-[#0b1e2e] via-[#112240] to-[#0a192f] w-full max-w-6xl mx-auto py-10 sm:py-12 px-4 sm:px-8 md:px-12"
         id="Forms"
