@@ -2,18 +2,25 @@
 
 import { useState } from "react";
 
+import Image from "next/image";
+
 import { CheckCircle } from "@mui/icons-material";
 
 import WrapperModal from "@/components/ui/WrapperModal";
 import ButtonContactModal from "./ButtonContactModal";
 import Formulary from "./Formulary";
 import { StarRating } from "./StarsRating";
+import LogoHorizontal from "@/app/components/common/LogoHorizontal";
 
 const HeroSection = () => {
   const [open, setOpen] = useState(false);
 
   return (
     <section className="relative w-full h-screen flex items-center justify-center text-white font-montserrat">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 z-50 pt-4">
+        <LogoHorizontal />
+      </div>
+
       <video
         autoPlay
         loop

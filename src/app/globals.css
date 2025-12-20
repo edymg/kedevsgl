@@ -38,14 +38,6 @@ html {
   }
 }
 
-@media (min-width: 410px) {
-  .navbar-custom {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
 html,
 body {
   overflow-x: hidden;

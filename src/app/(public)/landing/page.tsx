@@ -1,21 +1,20 @@
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import { Toaster } from "sonner";
+
 import HeroSection from "./components/HeroSection";
 import { FaqSection } from "./components/FaqSection";
-import OurServices from "./components/OurServices";
 import Partners from "./components/Partners";
+import OurServices from "./components/OurServices";
 import ReviewCarousel from "./components/ReviewCarousel";
 import { FinalCTA } from "./components/FinalCTA";
-import { Toaster } from "sonner";
 import WhatsappLive from "./components/WhatsappLive";
 import { ContactsProvider } from "../../../components/ui/ContactProvider";
 import ScrollNavigation from "@/components/ui/ScrollNavigation";
 import { Projects } from "./components/Projects";
+import Footer from "./components/Footer";
 
 const PageNew = () => {
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar />
       <main className="w-screen flex flex-col">
         <HeroSection />
         <Partners />
