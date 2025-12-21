@@ -2,6 +2,8 @@
 import { motion } from "framer-motion";
 import ButtonContactModal from "./ButtonContactModal";
 import Image from "next/image";
+import { RiskSection } from "./RiskSection";
+import { HowWeWorkSection } from "./HowWeWorkSection";
 
 const OurServices = () => {
   return (
@@ -13,27 +15,21 @@ const OurServices = () => {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        viewport={{ once: false }}
+        viewport={{ once: true }}
       >
-        Ofrecemos <span className="text-[#10B981]">Soluciones</span> para
-        Potenciar tu Empresa
+        Tu <span className="text-[#10B981]">Software</span> ya no debería ser un
+        riesgo
       </motion.h2>
-
       <div className="flex flex-col gap-8 sm:gap-12">
-        <motion.div
+        <RiskSection />
+
+        {/* <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           className="flex flex-col md:flex-row items-center gap-6 text-white"
         >
-          <Image
-            width={500}
-            height={300}
-            src="/CDigital.jpg"
-            alt="Consultoría digital"
-            className="w-full md:w-1/2 h-64 object-cover rounded-lg"
-          />
           <div className="w-full md:w-1/2 mt-4 md:mt-0">
             <h3 className="text-xl sm:text-2xl font-semibold">
               Evolución continua del software
@@ -46,22 +42,15 @@ const OurServices = () => {
               <ButtonContactModal title="Optimiza tu negocio hoy" />
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
 
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           className="flex flex-col md:flex-row-reverse items-center gap-6 text-white"
         >
-          <Image
-            width={500}
-            height={300}
-            src="/DigitalEcosystem.jpeg"
-            alt="Evolución de ecosistemas"
-            className="w-full md:w-1/2 h-64 object-cover rounded-lg"
-          />
           <div className="w-full md:w-1/2 mt-4 md:mt-0">
             <h3 className="text-xl sm:text-2xl font-semibold">
               Control y reducción de riesgos
@@ -74,22 +63,15 @@ const OurServices = () => {
               <ButtonContactModal title="Moderniza tus aplicaciones" />
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
 
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           className="flex flex-col md:flex-row items-center gap-6 text-white"
         >
-          <Image
-            width={500}
-            height={300}
-            src="/SmartProcess.jpeg"
-            alt="Optimización de procesos"
-            className="w-full md:w-1/2 h-64 object-cover rounded-lg"
-          />
           <div className="w-full md:w-1/2 mt-4 md:mt-0">
             <h3 className="text-xl sm:text-2xl font-semibold">
               Escalabilidad y roadmap
@@ -102,7 +84,7 @@ const OurServices = () => {
               <ButtonContactModal title="Automatiza tus procesos" />
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

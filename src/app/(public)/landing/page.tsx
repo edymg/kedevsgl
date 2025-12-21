@@ -11,6 +11,9 @@ import { ContactsProvider } from "../../../components/ui/ContactProvider";
 import ScrollNavigation from "@/components/ui/ScrollNavigation";
 import { Projects } from "./components/Projects";
 import Footer from "./components/Footer";
+import { HowWeWorkSection } from "./components/HowWeWorkSection";
+import { IdealClientsSection } from "./components/IdealClientsSection";
+import { BenefitsSection } from "./components/BenefitsSection";
 
 const PageNew = () => {
   return (
@@ -19,6 +22,9 @@ const PageNew = () => {
         <HeroSection />
         <Partners />
         <OurServices />
+        <HowWeWorkSection />
+        <IdealClientsSection />
+        <BenefitsSection />
         <ReviewCarousel />
         <ContactsProvider />
         <Projects />
