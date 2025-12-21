@@ -41,7 +41,7 @@ export function HowWeWorkSection() {
             aislados.
           </p>
         </div>
-        <div className="bg-gradient-to-r from-[#0a1128] to-[#1a1f3c]  border border-primary/20 rounded-2xl p-8 md:p-12 mb-8">
+        <div className="bg-gradient-to-b from-[#0b1e2e] via-[#112240] to-[#0a192f]  border border-primary/20 rounded-2xl p-8 md:p-12 mb-8">
           <p className="text-xl md:text-2xl font-semibold mb-8 text-center text-white">
             Nos integramos como tu equipo técnico mensual, asumiendo la
             responsabilidad continua de tu software

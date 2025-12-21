@@ -7,7 +7,7 @@ import { idealFor, notFor } from "../data/idealClients";
 
 export function IdealClientsSection() {
   return (
-    <section className="border-y border-border bg-gradient-to-r from-[#0a1128] to-[#1a1f3c]  border border-primary/20 font-montserrat">
+    <section className="border-y border-border bg-gradient-to-b from-[#0b1e2e] via-[#112240] to-[#0a192f]  border border-primary/20 font-montserrat">
       <div className="container mx-auto px-4 py-16 md:py-20">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-white">

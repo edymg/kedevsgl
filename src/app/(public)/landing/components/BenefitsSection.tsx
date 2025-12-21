@@ -26,7 +26,7 @@ export function BenefitsSection() {
             </div>
           ))}
         </div>
-        <div className="bg-gradient-to-r from-[#0a1128] to-[#1a1f3c]  border rounded-2xl p-8 md:p-12 text-center">
+        <div className="bg-gradient-to-b from-[#0b1e2e] via-[#112240] to-[#0a192f]  border rounded-2xl p-8 md:p-12 text-center">
           <p className="text-2xl md:text-3xl font-bold mb-4 text-balance text-white">
             Tu software deja de ser un problema y se convierte en un activo
             estratégico
