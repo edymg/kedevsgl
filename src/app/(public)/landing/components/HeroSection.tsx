@@ -2,8 +2,6 @@
 
 import { useState } from "react";
 
-import Image from "next/image";
-
 import { CheckCircle } from "@mui/icons-material";
 
 import WrapperModal from "@/components/ui/WrapperModal";
@@ -11,6 +9,7 @@ import ButtonContactModal from "./ButtonContactModal";
 import Formulary from "./Formulary";
 import { StarRating } from "./StarsRating";
 import LogoHorizontal from "@/app/components/common/LogoHorizontal";
+import AnimatedTitle from "./AnimatedTitle";
 
 const HeroSection = () => {
   const [open, setOpen] = useState(false);
@@ -33,14 +32,14 @@ const HeroSection = () => {
 
       <div className="absolute inset-0 bg-black bg-opacity-70"></div>
 
-      <div className="relative z-10 text-center max-w-3xl">
+      <div className="relative z-10 text-center max-w-3xl mt-6 sm:mt-0">
         <h1 className="text-4xl md:text-6xl font-bold sm:mt-8">
-          Cuando tu Software falla,{" "}
-          <span className="text-[#10B981]">tu Negocio pierde Dinero</span>
+          Cuando tu <AnimatedTitle title="Software" color="secondary" /> Falla,
+          tu Negocio Pierde <AnimatedTitle title="Dinero" color="secondary" />
         </h1>
         <p className="text-lg mt-4">
-          Kedevs se encarga de que eso no pase. Partner técnico mensual para
-          empresas con ingresos recurrentes y plataformas críticas.
+          Kedevs es tu partner técnico mensual para estabilizar, mejorar y
+          escalar plataformas críticas sin contratar equipo interno.
         </p>
 
         <div className="mt-6">
@@ -51,17 +50,18 @@ const HeroSection = () => {
           <StarRating rating={4.7} />
         </div>
 
-        <div className="flex flex-col gap-6 justify-center pt-4 text-sm">
+        <div className="flex flex-col sm:flex-row gap-6 items-center justify-center pt-8 text-sm">
           <div className="flex items-center gap-2 text-muted-foreground">
             <CheckCircle className="w-5 h-5 text-[#10B981]" />
-            <span>Diagnóstico técnico estratégico sin costo.</span>
+            <span>Evolución continua.</span>
           </div>
           <div className="flex items-center gap-2 text-muted-foreground">
             <CheckCircle className="w-5 h-5 text-[#10B981]" />
-            <span>
-              Identificamos riesgos operativos, cuellos de botella y
-              oportunidades de crecimiento en tu software.
-            </span>
+            <span>Equipo técnico completo.</span>
+          </div>
+          <div className="flex items-center gap-2 text-muted-foreground">
+            <CheckCircle className="w-5 h-5 text-[#10B981]" />
+            <span>Control y estabilidad operativa</span>
           </div>
         </div>
       </div>
