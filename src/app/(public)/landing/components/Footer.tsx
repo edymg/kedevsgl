@@ -1,31 +1,17 @@
 import React from "react";
-import { Facebook, Twitter, Instagram, YouTube, LinkedIn } from "@mui/icons-material";
-import LogoHorizontal from "@/app/components/common/LogoHorizontal";
+import { Instagram, YouTube, LinkedIn } from "@mui/icons-material";
+
 import Link from "next/link";
+
+import LogoHorizontal from "@/app/components/common/LogoHorizontal";
 
 const Footer = () => {
   return (
     <footer className="border-t border-slate-200 bg-slate-50">
       <div className="px-5 py-12 mx-auto max-w-7xl sm:px-6 md:px-8 lg:py-16">
-        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
-
-          <div className="space-y-4 max-w-xs mx-auto sm:mx-0">
-            <Link
-              href="/"
-              className="inline-block transition-transform hover:scale-105 active:scale-95"
-              aria-label="Home"
-            >
-              <LogoHorizontal />
-            </Link>
-            <p className="text-sm leading-relaxed text-slate-700 text-center sm:text-left">
-              Transforma tu productividad con procesos automatizados y eficientes
-            </p>
-            <p className="text-sm font-medium text-slate-800 text-center sm:text-left">
-              © {new Date().getFullYear()} Kedevs. Todos los derechos reservados.
-            </p>
-          </div>
-
-          <div className="space-y-4 sm:items-left lg:text-center">
+        <div className="grid grid-cols-1 gap-12 sm:grid-cols-3 lg:gap-8 place-items-center">
+          {/* Social */}
+          <div className="space-y-4 sm:items-left lg:text-center hidden sm:block">
             <h3 className="text-sm font-semibold tracking-widest text-slate-900 uppercase text-center ">
               Social
             </h3>
@@ -34,18 +20,18 @@ const Footer = () => {
                 {
                   icon: Instagram,
                   href: "https://www.instagram.com/kedevs/",
-                  label: "Instagram"
+                  label: "Instagram",
                 },
                 {
                   icon: YouTube,
                   href: "https://www.youtube.com/@kedevs",
-                  label: "YouTube"
+                  label: "YouTube",
                 },
                 {
                   icon: LinkedIn,
                   href: "https://www.linkedin.com/company/kedevs/",
-                  label: "LinkedIn"
-                }
+                  label: "LinkedIn",
+                },
               ].map((social) => (
                 <Link
                   key={social.label}
@@ -61,14 +47,25 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="space-y-4 sm:text-center lg:text-center">
-            <h3 className="text-sm font-semibold tracking-widest text-slate-900 uppercase text-center sm:text-left">
+          <div className="space-y-4 max-w-xs mx-auto sm:mx-0">
+            <Link
+              href="/"
+              className="inline-block transition-transform hover:scale-105 active:scale-95"
+              aria-label="Home"
+            >
+              <LogoHorizontal />
+            </Link>
+          </div>
+
+          {/* Legal */}
+          <div className="space-y-4 sm:text-center lg:text-center hidden sm:block">
+            <h3 className="text-sm font-semibold tracking-widest text-slate-900 uppercase text-center">
               Legal
             </h3>
             <nav className="space-y-2.5">
               {[
                 { name: "Política de Privacidad", href: "/privacidad" },
-                { name: "Términos del servicio", href: "/terminos" }
+                { name: "Términos del servicio", href: "/terminos" },
               ].map((link) => (
                 <Link
                   key={link.name}
@@ -86,6 +83,10 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+      <p className="text-sm font-medium text-slate-800 text-center mb-[10px] sm:mb-8">
+        © {new Date().getFullYear()} Kedevs. Todos los derechos reservados.
+      </p>
     </footer>
   );
 };
