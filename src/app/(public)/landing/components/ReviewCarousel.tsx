@@ -62,14 +62,14 @@ export default function ReviewCarousel() {
   }, []);
 
   return (
-    <section className="w-full py-8 relative overflow-hidden mb-6 mt-16">
+    <section className="w-full py-4 relative overflow-hidden mb-4 sm:mb-16 font-montserrat">
       <div className="container mx-auto px-4 relative z-10">
         <motion.h2
           className="text-3xl sm:text-4xl md:text-5xl font-bold text-black text-center mb-8 sm:mb-12"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
         >
           <p className="text-2xl md:text-6xl font-bold text-center mt-8 my-12 md:px-10">
             Lo que dicen nuestros{" "}

@@ -37,7 +37,7 @@ const BrandCarousel: React.FC<BrandCarouselProps> = ({
         {[...brands, ...brands, ...brands].map((brand, index) => (
           <div
             key={index}
-            className="flex-none px-8 py-4 text-2xl font-bold text-gray-800 bg-white bg-opacity-80 mx-4 rounded-lg shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg w-[200px] h-[100px] flex items-center justify-center"
+            className="flex-none px-8 py-4 text-2xl font-bold mx-4 w-[200px] h-[100px] flex items-center justify-center"
           >
             <Image src={brand} width={100} height={50} alt={brand} />
           </div>
