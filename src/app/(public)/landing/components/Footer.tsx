@@ -8,7 +8,7 @@ import LogoHorizontal from "@/app/components/common/LogoHorizontal";
 const Footer = () => {
   return (
     <footer className="border-t border-slate-200 bg-slate-50">
-      <div className="px-5 py-12 mx-auto max-w-7xl sm:px-6 md:px-8 lg:py-16">
+      <div className="px-5 pt-12 mx-auto max-w-7xl sm:px-6 md:px-8 lg:pt-16">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-3 lg:gap-8 place-items-center">
           {/* Social */}
           <div className="space-y-4 sm:items-left lg:text-center hidden sm:block">
