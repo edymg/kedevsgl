@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const Partners = () => {
   return (
-    <div className="mx-2 py-10 rounded-lg mt-4 text-center">
+    <div className="mx-2 py-6 rounded-lg mt-4 text-center font-montserrat">
       <motion.h2
         className="text-2xl md:text-6xl font-bold text-center mt-8 md:mx-32"
         initial={{ opacity: 0, y: 50 }}

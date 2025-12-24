@@ -20,11 +20,11 @@ const PageNew = () => {
     <div className="min-h-screen flex flex-col">
       <main className="w-screen flex flex-col">
         <HeroSection />
-        <Partners />
         <OurServices />
         <HowWeWorkSection />
         <IdealClientsSection />
         <BenefitsSection />
+        <Partners />
         <ReviewCarousel />
         <ContactsProvider />
         <Projects />
