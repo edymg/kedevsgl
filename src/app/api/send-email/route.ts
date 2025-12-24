@@ -7,7 +7,7 @@ export async function POST(req: Request) {
     const apiKey = process.env.RESEND_API_KEY;
 
     if (!apiKey) {
-      throw new Error("RESEND_API_KEY is missing");
+      throw new Error("cedentials is missing");
     }
 
     const resend = new Resend(apiKey);
@@ -15,8 +15,7 @@ export async function POST(req: Request) {
     const body = await req.json();
     console.log("🔍 Request Body:", body);
 
-    // Check only required fields (modify as needed)
-    const requiredFields = ["fullname", "emailEmpresa", "message"];
+    const requiredFields = ["fullname"];
     const missingFields = requiredFields.filter((field) => !body[field]);
 
     if (missingFields.length > 0) {
@@ -32,19 +31,20 @@ export async function POST(req: Request) {
       subject: `Nuevo mensaje de ${body.fullname}`,
       react: EmailTemplate({
         fullname: body.fullname || "",
-        emailEmpresa: body.emailEmpresa || "",
+        emailCompany: body.emailCompany || "",
         countries: body.countries || "",
         phone: body.phone || "",
         nameCompany: body.nameCompany || "",
-        payOptions: body.payOptions || "",
-        message: body.message || "",
+        generateIncome: body.generateIncome || "",
+        systemStage: body.systemStage || "",
+        relationPartner: body.relationPartner || "",
         aceptaTerms: Boolean(body.aceptaTerms),
       }),
     });
 
     if (error) {
       console.error("📛 Error al enviar correo from routes:", error);
-      return NextResponse.json({ error: error.message }, { status: 422 }); // 422 for processing errors
+      return NextResponse.json({ error: error.message }, { status: 422 });
     }
 
     console.log("✅ Email sent from routes:", data);

@@ -42,3 +42,21 @@ html,
 body {
   overflow-x: hidden;
 }
+
+/* Scrollbar global */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e5e7eb;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #10b981;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #109468; /* indigo-600 */
+}

@@ -434,21 +434,53 @@ export const countries: readonly Countries[] = [
   { code: "ZW", label: "Zimbabwe", phone: "263" },
 ] as const;
 
-export const optionPay = [
-  { id: "1", label: "¿Tu empresa ya tiene un software en producción?" },
+export const generateIncome = [
+  { id: "1", label: "Suscripciones o contratos mensuales" },
   {
     id: "2",
-    label: "¿El sistema impacta directamente en ingresos u operación?",
+    label: "Software propio crítico para operación o ingresos",
   },
-  { id: "3", label: "¿Buscas un partner técnico mensual?" },
+  { id: "3", label: "SaaS en lanzamiento con monetización definida" },
+  { id: "4", label: "No tenemos un modelo recurrente" },
 ] as const;
+
+export const systemStage = [
+  {
+    id: "1",
+    label:
+      "Ya tenemos un sistema funcionando y necesitamos evolución continua y control",
+  },
+  {
+    id: "2",
+    label:
+      "Tenemos un sistema, pero no contamos con un partner técnico responsable",
+  },
+  {
+    id: "3",
+    label:
+      "Vamos a desarrollar un sistema desde cero como base de un negocio escalable",
+  },
+  { id: "4", label: "Solo buscamos un desarrollo puntual sin continuidad" },
+];
+
+export const relationPartner = [
+  { id: "1", label: "Equipo técnico mensual responsable del sistema" },
+  {
+    id: "2",
+    label: "Acompañamiento estratégico con roadmap y evolución continua",
+  },
+  {
+    id: "3",
+    label: "Relación a largo plazo orientada a estabilidad y escalabilidad",
+  },
+  { id: "4", label: "Proveedor puntual para un proyecto específico" },
+];
 
 const phoneSchema = z
   .string()
   .min(1, "Phone number is required")
   .refine(
     (phone) => {
-      // Basic check: Only digits, +, spaces, hyphens, and at least 5 digits
       const sanitized = phone.replace(/[\s\-+()]/g, "");
       return /^\d{5,}$/.test(sanitized); // At least 5 digits
     },
@@ -458,19 +490,24 @@ const phoneSchema = z
   );
 
 export const schema = z.object({
-  fullname: z.string().min(1, { message: "Required" }),
-  emailEmpresa: z
+  fullname: z.string().min(1, { message: "Es requerido" }),
+  emailCompany: z
     .string()
-    .min(1, { message: "Email is required" })
+    .min(1, { message: "El email es requerido" })
     .refine((text) => patterns.email.test(text), {
-      message: "Email not valid or should check typos",
+      message: "El correo electrónico no es válido",
     }),
-  countries: string().min(1, { message: "Required" }),
+  countries: string().min(1, { message: "Requerido" }),
   phone: phoneSchema,
   /* 	companyRole: z.string().min(1, { message: 'Required' }), */
-  nameCompany: z.string().min(1, { message: "Required" }),
-  payOpt: z.string().min(1, { message: "Must Select option" }),
-  message: z.string().min(1, { message: "Required" }),
+  nameCompany: z.string().min(1, { message: "Requerido" }),
+  generateIncome: z
+    .string()
+    .min(1, { message: "Deberia seleccionar una opción" }),
+  systemStage: z.string().min(1, { message: "Deberia seleccionar una opción" }),
+  relationPartner: z
+    .string()
+    .min(1, { message: "Deberia seleccionar una opción" }),
   aceptaTerms: z.boolean(),
 });
 
@@ -478,11 +515,12 @@ export type Schema = z.infer<typeof schema>;
 
 export const defaultValues: Schema = {
   fullname: "",
-  emailEmpresa: "",
+  emailCompany: "",
   countries: "",
   phone: "",
   nameCompany: "",
-  payOpt: "",
-  message: "",
+  generateIncome: "",
+  systemStage: "",
+  relationPartner: "",
   aceptaTerms: false,
 };

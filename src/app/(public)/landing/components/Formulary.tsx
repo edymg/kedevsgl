@@ -12,7 +12,9 @@ import {
   defaultValues,
   Schema,
   countries,
-  optionPay,
+  generateIncome,
+  systemStage,
+  relationPartner,
 } from "../types/schema";
 
 import { RHFAutocomplete } from "@/components/ui/Autocomplete";
@@ -43,8 +45,6 @@ export default function Formulary() {
   }, [selectedCountry, setValue]);
 
   const onSubmit: SubmitHandler<Schema> = async (data) => {
-    console.log("Form Submitted from contacts!", data);
-
     const formattedData = {
       ...data,
       countries: countries.find((country) => country.code === data.countries)
@@ -54,9 +54,16 @@ export default function Formulary() {
             countries.find((country) => country.code === data.countries)?.phone
           })`
         : data.countries,
-      payOptions:
-        optionPay.find((size, index) => String(index) === data.payOpt)?.label ||
-        data.payOpt,
+      generateIncome:
+        generateIncome.find((_, index) => String(index) === data.generateIncome)
+          ?.label || data.generateIncome,
+      systemStage:
+        systemStage.find((_, index) => String(index) === data.systemStage)
+          ?.label || data.systemStage,
+      relationPartner:
+        relationPartner.find(
+          (_, index) => String(index) === data.relationPartner
+        )?.label || data.relationPartner,
     };
     console.log("Formatted Data:", formattedData);
 
@@ -89,7 +96,7 @@ export default function Formulary() {
   }
 
   return (
-    <div>
+    <div className="px-4 py-6 sm:py-4">
       <FormProvider {...methods}>
         <form
           onSubmit={handleSubmit(onSubmit)}
@@ -106,6 +113,11 @@ export default function Formulary() {
               name="fullname"
               label="Nombre Completo"
               placeholder="Escribe tu nombre completo"
+            />
+            <RHFTextField<Schema>
+              name="emailCompany"
+              label="Correo"
+              placeholder="Escribe tu correo"
             />
             <RHFTextField<Schema>
               name="nameCompany"
@@ -144,35 +156,66 @@ export default function Formulary() {
               />
               <RHFTextField<Schema> name="phone" label="Telefono" />
             </div>
-            <div className="">
+            <div>
               <Typography
                 variant="body2"
                 fontSize="17px"
                 color="info"
-                align="center"
                 sx={{ display: "block", margin: "2px 0 2px 0" }}
                 className="text-gray-500 dark:text-gray-300"
               >
-                Trabajamos con empresas que invierten mensualmente en la
-                evolución de su software.
+                ¿Cómo genera ingresos actualmente tu empresa?
               </Typography>
               <RHFAutocomplete<Schema>
-                name="payOpt"
+                name="generateIncome"
                 label="Opciones"
-                options={optionPay.map((opt, i) => ({
+                options={generateIncome.map((opt, i) => ({
                   id: String(i),
                   label: opt.label,
                 }))}
               />
             </div>
-            <RHFTextField<Schema>
-              className="md:col-span-2"
-              name="message"
-              label="Proyecto o Idea:"
-              multiline
-              rows={3}
-              placeholder="Por ejemplo: Necesito un software para gestionar el inventario de mi empresa..."
-            />
+
+            <div>
+              <Typography
+                variant="body2"
+                fontSize="17px"
+                color="info"
+                sx={{ display: "block", margin: "2px 0 2px 0" }}
+                className="text-gray-500 dark:text-gray-300"
+              >
+                ¿En qué etapa se encuentra tu plataforma o sistema?
+              </Typography>
+              <RHFAutocomplete<Schema>
+                name="systemStage"
+                label="Opciones"
+                options={systemStage.map((opt, i) => ({
+                  id: String(i),
+                  label: opt.label,
+                }))}
+              />
+            </div>
+
+            <div>
+              <Typography
+                variant="body2"
+                fontSize="17px"
+                color="info"
+                sx={{ display: "block", margin: "2px 0 2px 0" }}
+                className="text-gray-500 dark:text-gray-300"
+              >
+                ¿Qué tipo de relación buscas con tu partner tecnológico?
+              </Typography>
+              <RHFAutocomplete<Schema>
+                name="relationPartner"
+                label="Opciones"
+                options={relationPartner.map((opt, i) => ({
+                  id: String(i),
+                  label: opt.label,
+                }))}
+              />
+            </div>
+
             <RHFSwitch<Schema>
               name="aceptaTerms"
               label={

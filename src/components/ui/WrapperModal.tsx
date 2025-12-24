@@ -3,6 +3,8 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
+import { IconButton } from "@mui/material";
+import { Close } from "@mui/icons-material";
 
 const style = {
   position: "absolute",
@@ -42,9 +44,6 @@ export default function WrapperModal({
   width,
   height,
 }: WrapperModalProps) {
-  //TODO:lenguage
-  //TODO: dark mode and light mode
-
   return (
     <div className="absolute">
       <Modal
@@ -70,9 +69,21 @@ export default function WrapperModal({
             backgroundColor: "#FFFFFF",
             width: `${width ?? ""}`,
             height: `${height ?? ""}`,
+            margin: "0",
+            padding: "0",
           }}
         >
-          {children}
+          {/* CLOSE ICON (FUERA DEL SCROLL) */}
+          <div
+            onClick={() => onOpen(false)}
+            className="absolute top-2 right-3 sm:right-[-90px] text-gray-500 cursor-pointer"
+          >
+            <Close />
+          </div>
+
+          <div className="h-screen overflow-y-auto scrollbar-custom sm:w-[500px] bg-white">
+            {children}
+          </div>
         </Box>
       </Modal>
     </div>

@@ -39,7 +39,7 @@ export function RHFAutocomplete<T extends FieldValues>({
           }}
           renderInput={(params) => (
             <TextField
-              className="group hover:border-emerald-500 transition-colors duration-200"
+              className="group hover:border-emerald-500 transition-colors duration-200 hover:bg-border-primary"
               {...params}
               fullWidth
               inputRef={ref}
