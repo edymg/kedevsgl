@@ -15,11 +15,7 @@ const HeroSection = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <section className="relative w-full h-screen flex items-center justify-center text-white font-montserrat">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 z-50 pt-4">
-        <LogoHorizontal />
-      </div>
-
+    <section className="relative w-full h-screen flex flex-col items-center justify-center text-white font-montserrat">
       <video
         autoPlay
         loop
@@ -32,8 +28,9 @@ const HeroSection = () => {
 
       <div className="absolute inset-0 bg-black bg-opacity-70"></div>
 
-      <div className="relative z-10 text-center max-w-3xl mt-6 sm:mt-0">
-        <h1 className="text-4xl md:text-6xl font-bold sm:mt-8">
+      <div className="z-50 text-center h-full flex flex-col justify-center items-center max-w-3xl mb-8">
+        <LogoHorizontal />
+        <h1 className="text-4xl md:text-6xl font-bold mt-4 sm:mt-16">
           Cuando tu <AnimatedTitle title="Software" color="secondary" /> Falla,
           tu Negocio Pierde <AnimatedTitle title="Dinero" color="secondary" />
         </h1>
