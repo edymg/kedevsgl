@@ -25,9 +25,6 @@ const brandsRandom = [
   "/movento.jpg",
 ];
 
-const randomBrands = brands.sort();
-console.log(randomBrands, "randomBrands");
-
 const DiagonalBrandCarousel: React.FC = () => {
   return (
     <div className="w-full overflow-hidden relative bg-blue-dark py-16">
