@@ -31,7 +31,7 @@ export function BenefitsSection() {
             Tu software deja de ser un problema y se convierte en un activo
             estratégico
           </p>
-          <ButtonContactModal title="Comenzar ahora" />
+          <ButtonContactModal title="Agenda una evaluación técnica" />
         </div>
       </div>
     </section>
