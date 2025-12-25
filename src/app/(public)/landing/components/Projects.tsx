@@ -14,7 +14,7 @@ import { projects } from "@/lib/project";
 
 import { Project } from "../types/project";
 
-import WrapperModal from "@/components/ui/WrapperModal";
+import Modal from "@/components/ui/modal";
 import { ProjectInfo } from "./ProjectInfo";
 import AnimatedTitle from "./AnimatedTitle";
 
@@ -121,9 +121,9 @@ export function Projects() {
         </div>
       </section>
 
-      <WrapperModal open={open} onOpen={onOpen} width="90%" height="90%">
+      <Modal open={open} onOpen={onOpen} width="90%">
         <ProjectInfo project={selectedProject} onOpen={onOpen} />
-      </WrapperModal>
+      </Modal>
     </>
   );
 }

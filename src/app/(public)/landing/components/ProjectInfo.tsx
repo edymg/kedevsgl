@@ -1,9 +1,9 @@
 "use client";
 
-import { X, ArrowRight } from "@/../node_modules/lucide-react";
-import { useEffect, useState } from "react";
+import { X } from "@/../node_modules/lucide-react";
 import { Project } from "../types/project";
 import { Button } from "@mui/material";
+import ButtonContactModal from "./ButtonContactModal";
 
 interface ProjectInfoProps {
   project: Project | null;
@@ -59,7 +59,7 @@ export function ProjectInfo({ project, onOpen }: ProjectInfoProps) {
           {/* Right Side - Mockups and CTA */}
           <div className="flex flex-col items-center justify-between">
             {/* Mockups Stack */}
-            <div className="relative w-full h-48 md:h-64 mb-8">
+            <div className="relative w-full h-48 md:h-64 mb-2">
               {project &&
                 project.mockups.map((mockup, idx) => (
                   <div
@@ -86,14 +86,11 @@ export function ProjectInfo({ project, onOpen }: ProjectInfoProps) {
               <p className="text-xs md:text-sm text-muted-foreground mb-2 uppercase tracking-widest font-semibold">
                 Cliente
               </p>
-              <h3 className="text-xl md:text-2xl font-bold text-foreground mb-6">
+              <h3 className="text-xl md:text-2xl font-bold text-foreground">
                 {project && project.name}
               </h3>
 
-              <button className="group relative px-8 md:px-10 py-3 md:py-4 bg-gradient-to-r from-accent to-accent/80 hover:from-accent/90 hover:to-accent/70 text-accent-foreground font-semibold rounded-full transition-all duration-300 shadow-lg shadow-accent/30 hover:shadow-accent/50 hover:shadow-2xl inline-flex items-center gap-2 text-sm md:text-base">
-                de
-                <ArrowRight className="w-4 md:w-5 h-4 md:h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
+              <ButtonContactModal title="contactanos" />
             </div>
           </div>
         </div>
