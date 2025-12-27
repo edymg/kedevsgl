@@ -32,15 +32,19 @@ const HeroSection = () => {
 
       <div className="z-50 text-center h-full flex flex-col justify-center items-center max-w-5xl mb-8">
         <LogoHorizontal />
-        <h1 className="text-4xl md:text-6xl font-bold mt-4 sm:mt-16">
+        <h1 className="text-3xl md:text-6xl font-bold mt-4 sm:mt-16">
           Cuando tu <AnimatedTitle title="Negocio" color="secondary" /> depende
           de un Sistema, No puedes{" "}
           <AnimatedTitle title="Improvisar" color="secondary" />
         </h1>
-        <p className="text-lg mt-4">
-          Kedevs actúa como tu equipo técnico externo, desarrollando y
-          gestionando sistemas a medida que impulsan la operación y las ventas
-          de tu negocio, sin necesidad de contratar personal interno.
+        <p className="text-lg mt-4 hidden sm:block">
+          Kedevs es tu partner técnico mensual para crear y hacer crecer
+          sistemas desde cero que sostienen la operación y las ventas de tu
+          negocio.
+        </p>
+        <p className="text-lg mt-4 block sm:hidden">
+          El partner técnico mensual para construir y hacer crecer tu sistema
+          como el corazón de tu negocio
         </p>
 
         <div className="mt-6">
