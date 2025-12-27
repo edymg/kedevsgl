@@ -46,6 +46,7 @@ export default function ContactForm() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
             >
               Consultoría técnica estratégica{" "}
               <AnimatedTitle title="(sin costo)" className="mt-2" />
@@ -55,6 +56,7 @@ export default function ContactForm() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
             >
               No es una llamada de ventas.
             </motion.div>
@@ -63,6 +65,7 @@ export default function ContactForm() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
             >
               <h2 className="font-bold mb-2">
                 Es un diagnóstico técnico y estratégico donde:
@@ -90,12 +93,14 @@ export default function ContactForm() {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
+              viewport={{ once: true }}
             >
               <motion.h2
                 className="text-[20px] leading-none text-justify text-[#f2f2f2] py-4"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
               >
                 Llevemos tu negocio&nbsp;a lo más alto:
               </motion.h2>

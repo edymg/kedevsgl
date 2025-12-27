@@ -8,9 +8,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { motion } from "framer-motion";
-import { Link } from "@mui/material";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import ButtonContactModal from "./ButtonContactModal";
 
@@ -52,63 +49,17 @@ export function FaqSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="text-4xl font-bold text-white text-center mb-10"
+            viewport={{ once: true }}
           >
             Preguntas Frecuentes
           </motion.h2>
-
-          {/*  <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="mb-10 p-6 bg-[#ffffff18] backdrop-blur-lg border border-[#2d3748]/50 rounded-lg"
-          >
-            <p className="text-lg sm:text-xl text-bold text-gray-300 font-sans text-justify md:text-center">
-              ¿Tienes alguna duda?  Déjanos tu pregunta: 
-            </p>
-             <div className="flex flex-col sm:flex-row gap-3">
-              <form onSubmit={handleSendQuestion} className="flex gap-3 w-full" id="form2">
-                <Input
-                  type="text"
-                  placeholder="Escribe tu pregunta aquí..."
-                  value={pregunta}
-                  onChange={(e) => setPregunta(e.target.value)}
-                  className="flex-1 w-full bg-[#ffffff3a] text-white border border-[#2d3748] focus:border-emerald-500 placeholder:text-gray-300 py-3 px-5 rounded-lg text-lg"
-                />
-                <Button
-                  onClick={handleSendQuestion}
-                  style={{
-                    background: 'linear-gradient(to right, #10B981, #047857)',
-                    color: 'white',
-                    fontWeight: 'bold',
-                    textTransform: 'uppercase',
-                    letterSpacing: '0.05em',
-                    padding: '12px 24px',
-                    borderRadius: '8px',
-                    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-                    transition: 'all 0.3s ease',
-                  }}
-                  onMouseOver={(e) => {
-                    e.currentTarget.style.background = 'linear-gradient(to right, #0CA678, #065F46)';
-                    e.currentTarget.style.boxShadow = '0 6px 8px rgba(0, 0, 0, 0.15)';
-                    e.currentTarget.style.transform = 'translateY(-1px)';
-                  }}
-                  onMouseOut={(e) => {
-                    e.currentTarget.style.background = 'linear-gradient(to right, #10B981, #047857)';
-                    e.currentTarget.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
-                    e.currentTarget.style.transform = 'translateY(0)';
-                  }}
-                >
-                  Enviar
-                </Button>
-              </form>
-            </div> 
-          </motion.div> */}
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             className="space-y-3"
+            viewport={{ once: true }}
           >
             <Accordion type="single" collapsible className="w-full">
               {[
