@@ -8,27 +8,10 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { motion } from "framer-motion";
-import { toast } from "sonner";
 import ButtonContactModal from "./ButtonContactModal";
 
 export function FaqSection() {
   const [activeItem, setActiveItem] = useState<string | null>(null);
-  const [pregunta, setPregunta] = useState("");
-
-  const handleSendQuestion = (event: React.FormEvent) => {
-    event.preventDefault();
-    if (pregunta.trim() === "") {
-      toast.error("Por favor, escribe una pregunta antes de enviar.", {
-        className: "bg-yellow-500 text-black",
-      });
-      return;
-    }
-
-    toast.success("Tu pregunta ha sido enviada con éxito!", {
-      className: "bg-green-500 text-white",
-    });
-    setPregunta("");
-  };
 
   return (
     <div className="w-full py-20 flex justify-center">
