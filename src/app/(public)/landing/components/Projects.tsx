@@ -54,11 +54,11 @@ export function Projects() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="flex flex-wrap justify-center gap-6">
             {projects.map((project) => (
               <div
                 key={project.id}
-                className="group flex flex-col items-center text-center"
+                className="group flex flex-col items-center text-center sm:w-[48%]"
               >
                 {/* Project Card with Image */}
                 <div className="bg-white relative w-full mb-6 rounded-2xl overflow-hidden bg-secondary group-hover:border-accent/50 transition-all duration-300">
@@ -88,7 +88,7 @@ export function Projects() {
                     setSelectedProject(project);
                     onOpen();
                   }}
-                  className="w-full max-w-xs py-3 px-6 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold rounded-full transition-all duration-200 flex items-center justify-center gap-2 group/btn shadow-lg shadow-accent/20 hover:shadow-accent/30"
+                  className="w-full max-w-xs py-3 px-6 bg-accent hover:bg-red-400/90 text-accent-foreground font-semibold rounded-full transition-all duration-200 flex items-center justify-center gap-2 group/btn shadow-lg shadow-accent/20 hover:shadow-accent/30 cursor-pointer"
                   sx={{
                     background: "linear-gradient(to right, #10B981, #047857)",
                     color: "white",
