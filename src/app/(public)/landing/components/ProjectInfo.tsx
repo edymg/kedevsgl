@@ -27,29 +27,26 @@ export function ProjectInfo({ project, onOpen }: ProjectInfoProps) {
         </Button>
       </div>
 
-      {/* Content */}
       <div className="flex-1 p-6 md:p-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
-          {/* Left Side - Description and Gallery */}
           <div className="flex flex-col justify-between gap-4">
-            {/* Project Description */}
             <div>
               <p className="text-foreground/80 text-sm md:text-base leading-relaxed mb-8 font-light">
                 {project?.description}
               </p>
 
-              {/* Gallery Grid */}
               <div className="grid grid-cols-3 gap-3 md:gap-4">
                 {project &&
                   project.gallery.map((image, idx) => (
                     <div
                       key={idx}
-                      className="overflow-hidden aspect-square rounded-lg md:rounded-xl border border-border hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/10 group cursor-pointer"
+                      className="relative overflow-hidden aspect-square rounded-lg md:rounded-xl border border-border hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/10 group cursor-pointer"
                     >
-                      <img
+                      <Image
                         src={image || "/placeholder.svg"}
                         alt={`Gallery ${idx + 1}`}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300g"
+                        fill
                       />
                     </div>
                   ))}
@@ -71,23 +68,21 @@ export function ProjectInfo({ project, onOpen }: ProjectInfoProps) {
             </Link>
           </div>
 
-          {/* Right Side - Mockups and CTA */}
           <div className="flex flex-col items-center gap-3">
-            {/* Mockups Stack */}
             <div className="w-full h-48 md:h-80">
               <div
                 key={project!.id}
-                className="h-full rounded-lg md:rounded-xl border-4 border-foreground/20 shadow-2xl transition-transform duration-500 hover:shadow-accent/20"
+                className="relative h-full rounded-lg md:rounded-xl border-4 border-foreground/20 shadow-2xl transition-transform duration-500 hover:shadow-accent/20"
               >
-                <img
+                <Image
                   src={project!.mockup || "/placeholder.svg"}
                   alt={`Mockup ${project!.name}`}
                   className="w-full h-full object-cover"
+                  fill
                 />
               </div>
             </div>
 
-            {/* Client Info */}
             <div className="text-center">
               <p className="text-xs md:text-sm text-muted-foreground uppercase tracking-widest font-semibold">
                 Cliente
