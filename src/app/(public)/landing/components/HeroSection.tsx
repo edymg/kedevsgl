@@ -30,15 +30,17 @@ const HeroSection = () => {
 
       <div className="absolute inset-0 bg-black bg-opacity-70"></div>
 
-      <div className="z-50 text-center h-full flex flex-col justify-center items-center max-w-3xl mb-8">
+      <div className="z-50 text-center h-full flex flex-col justify-center items-center max-w-5xl mb-8">
         <LogoHorizontal />
         <h1 className="text-4xl md:text-6xl font-bold mt-4 sm:mt-16">
-          Cuando tu <AnimatedTitle title="Software" color="secondary" /> Falla,
-          tu Negocio Pierde <AnimatedTitle title="Dinero" color="secondary" />
+          Cuando tu <AnimatedTitle title="Negocio" color="secondary" /> depende
+          de un Sistema, No puedes{" "}
+          <AnimatedTitle title="Improvisar" color="secondary" />
         </h1>
         <p className="text-lg mt-4">
-          Kedevs es tu partner técnico mensual para estabilizar, mejorar y
-          escalar plataformas críticas sin contratar equipo interno.
+          Kedevs actúa como tu equipo técnico externo, desarrollando y
+          gestionando sistemas a medida que impulsan la operación y las ventas
+          de tu negocio, sin necesidad de contratar personal interno.
         </p>
 
         <div className="mt-6">
@@ -49,18 +51,18 @@ const HeroSection = () => {
           <StarRating rating={4.7} />
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-6 items-center justify-center pt-8 text-sm">
-          <div className="flex items-center gap-2 text-muted-foreground">
+        <div className="w-full flex flex-col sm:flex-row gap-6 items-center justify-center pt-8 text-sm">
+          <div className="flex items-center gap-2">
             <CheckCircle className="w-5 h-5 text-[#10B981]" />
-            <span>Evolución continua.</span>
+            <span>Evolución constante del sistema</span>
           </div>
           <div className="flex items-center gap-2 text-muted-foreground">
             <CheckCircle className="w-5 h-5 text-[#10B981]" />
-            <span>Equipo técnico completo.</span>
+            <span>Plan claro de crecimiento (roadmap)</span>
           </div>
           <div className="flex items-center gap-2 text-muted-foreground">
             <CheckCircle className="w-5 h-5 text-[#10B981]" />
-            <span>Control y estabilidad operativa</span>
+            <span>Control, estabilidad y orden</span>
           </div>
         </div>
       </div>
