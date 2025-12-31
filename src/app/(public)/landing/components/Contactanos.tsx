@@ -67,15 +67,22 @@ export default function ContactForm() {
               transition={{ duration: 0.5, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <h2 className="font-bold mb-2">
-                Es un diagnóstico técnico y estratégico donde:
-              </h2>
+              <h2 className="font-bold mb-2">Es una conversación donde:</h2>
               <ul>
                 {renderIconOnline("Evaluamos el estado de tu software")}
+                {renderIconOnline("Identificamos riesgos y puntos críticos")}
+                {renderIconOnline(
+                  "Definimos si necesitas un sistema nuevo o una reconstrucción completa"
+                )}
+                {renderIconOnline(
+                  "Evaluamos si KEDEVS es el partner adecuado para acompañarte"
+                )}
+
+                {/* {renderIconOnline("Evaluamos el estado de tu software")}
 
                 <li className="flex items-center gap-2">
                   {renderIconOnline("Identificamos riesgos y oportunidades")}
-                </li>
+                </li> */}
               </ul>
 
               <h2 className="mt-4 font-bold">Definimos el mejor camino:</h2>

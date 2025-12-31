@@ -105,7 +105,7 @@ export default function Formulary() {
           className="space-y-2"
         >
           <h2 className="text-2xl font-semibold text-center text-turqueza-letter-light capitalize">
-            ¡Solicita una consultoría técnica estratégica!
+            !Agendar consultoría técnica estratégica¡
           </h2>
 
           <Stack spacing={1} className="grid grid-cols-1 md:grid-cols-2">
