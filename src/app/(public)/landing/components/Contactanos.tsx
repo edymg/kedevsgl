@@ -30,7 +30,7 @@ export default function ContactForm() {
   return (
     <div id="contact" className="w-full flex justify-center font-montserrat">
       <section
-        className="relative overflow-hidden shadow-xl sm:rounded-lg rounded-lg bg-gradient-to-b from-[#0b1e2e] via-[#112240] to-[#0a192f] w-full max-w-6xl mx-auto py-10 sm:py-12 px-4 sm:px-8 md:px-12"
+        className="relative overflow-hidden shadow-xl md:rounded-lg bg-gradient-to-b from-[#0b1e2e] via-[#112240] to-[#0a192f] w-full max-w-6xl mx-auto py-10 sm:py-12 px-4 sm:px-8 md:px-12"
         id="Forms"
       >
         <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]" />
