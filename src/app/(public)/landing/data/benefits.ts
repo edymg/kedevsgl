@@ -11,22 +11,22 @@ export const benefits = [
   },
   {
     number: "3",
-    title: "Prioridades claras",
-    description: "No tareas sueltas, sino estrategia",
+    title: "Desiciones",
+    description: "Pensando en el negocio, no solo en lo técnico",
   },
   {
     number: "4",
-    title: "Menos riesgos",
-    description: "Operación predecible y estable",
+    title: "Menos Errores",
+    description: "Menos riesgos",
   },
   {
     number: "5",
-    title: "Visión a largo plazo",
-    description: "Acompañamiento técnico continuo",
+    title: "Crecimiento",
+    description: "Ordenado y predecible",
   },
   {
     number: "6",
     title: "Activo estratégico",
-    description: "Tu software deja de ser un problema",
+    description: "El sistema se convierte en un activo estratégico",
   },
 ];

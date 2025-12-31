@@ -14,7 +14,7 @@ export function BenefitsSection() {
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {benefits.map((benefit) => (
             <div key={benefit.number} className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-turqueza-letter-light/30 flex items-center justify-center">
+              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-turqueza-letter-light/30 flex items-center justify-center border border-turqueza-letter-light">
                 <span className="text-2xl font-bold text-turqueza-letter-light">
                   {benefit.number}
                 </span>
