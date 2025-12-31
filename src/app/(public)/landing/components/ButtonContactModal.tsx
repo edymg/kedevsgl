@@ -10,8 +10,9 @@ import { cn } from "@/lib/utils";
 interface BtnContactProps {
   title: string;
   size?: string;
+  width?: string;
 }
-const ButtonContactModal = ({ title, size }: BtnContactProps) => {
+const ButtonContactModal = ({ title, size, width }: BtnContactProps) => {
   const [open, setOpen] = useState(false);
   const onOpen = () => setOpen(!open);
 
@@ -24,12 +25,13 @@ const ButtonContactModal = ({ title, size }: BtnContactProps) => {
         endIcon={<ArrowRight className="h-8 w-8" />}
         sx={{
           background: "linear-gradient(to right, #10B981, #047857)",
+          width: width ?? "auto",
           color: "white",
           fontWeight: "bold",
           textTransform: "uppercase",
           letterSpacing: "0.05em",
           padding: "12px 24px",
-          borderRadius: "8px", // Slightly rounded corners
+          borderRadius: "8px",
           boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
           transition: "all 0.3s ease",
           "&:hover": {

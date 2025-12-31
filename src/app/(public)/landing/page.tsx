@@ -11,9 +11,10 @@ import { ContactsProvider } from "../../../components/ui/ContactProvider";
 import ScrollNavigation from "@/components/ui/ScrollNavigation";
 import { Projects } from "./components/Projects";
 import Footer from "./components/Footer";
-import { HowWeWorkSection } from "./components/HowWeWorkSection";
 import { IdealClientsSection } from "./components/IdealClientsSection";
 import { BenefitsSection } from "./components/BenefitsSection";
+import { KedevsPartnership } from "./components/KedevsPartnerchip";
+import { KedevsRoadmap } from "./components/KedevsRoadmap";
 
 const PageNew = () => {
   return (
@@ -21,7 +22,8 @@ const PageNew = () => {
       <main className="w-screen flex flex-col">
         <HeroSection />
         <OurServices />
-        <HowWeWorkSection />
+        <KedevsRoadmap />
+        <KedevsPartnership />
         <IdealClientsSection />
         <BenefitsSection />
         <Partners />
