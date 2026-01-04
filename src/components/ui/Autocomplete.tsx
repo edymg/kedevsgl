@@ -51,15 +51,25 @@ export function RHFAutocomplete<T extends FieldValues>({
           )}
           autoHighlight={autoHighlight}
           renderOption={renderOption} // Pass renderOption if provided
-          sx={{
-            "& .MuiAutocomplete-inputRoot": {
-              "&:hover .MuiOutlinedInput-notchedOutline": {
-                borderColor: "#059669", // emerald-600
+          slotProps={{
+            listbox: {
+              sx: {
+                "& .MuiAutocomplete-option": {
+                  transition: "background-color 150ms ease",
+
+                  "&:hover": {
+                    backgroundColor: "#a7f3d0", // emerald-200
+                  },
+
+                  "&.Mui-focused": {
+                    backgroundColor: "#a7f3d0",
+                  },
+
+                  "&[aria-selected='true']": {
+                    backgroundColor: "#d1fae5", // emerald-100
+                  },
+                },
               },
-            },
-            "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-              borderColor: "#059669", // emerald-600
-              borderWidth: "1px",
             },
           }}
         />
