@@ -65,7 +65,7 @@ export default function Formulary() {
           autoComplete="on"
           className="space-y-2"
         >
-          <h2 className="text-2xl font-semibold text-center text-turqueza-letter-light capitalize">
+          <h2 className="text-2xl font-semibold text-center text-turqueza-letter-light capitalize pb-1">
             !Agendar consultoría técnica estratégica¡
           </h2>
 
