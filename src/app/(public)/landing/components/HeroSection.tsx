@@ -30,7 +30,7 @@ const HeroSection = () => {
 
       <div className="absolute inset-0 bg-black bg-opacity-70"></div>
 
-      <div className="z-50 text-center h-full flex flex-col justify-center items-center max-w-5xl mb-8">
+      <div className="z-50 text-center h-full flex flex-col justify-center items-center max-w-5xl mb-8 mx-2 lg:mx-0">
         <LogoHorizontal />
         <h1 className="text-3xl md:text-6xl font-bold mt-4 sm:mt-16">
           Cuando tu <AnimatedTitle title="Negocio" color="secondary" /> depende
@@ -55,7 +55,7 @@ const HeroSection = () => {
           <StarRating rating={4.7} />
         </div>
 
-        <div className="w-full flex flex-col sm:flex-row gap-6 items-center justify-center pt-8 text-sm">
+        <div className="w-full flex flex-col md:flex-row gap-6 items-center justify-center pt-8 text-sm">
           <div className="flex items-center gap-2">
             <CheckCircle className="w-5 h-5 text-[#10B981]" />
             <span>Evolución constante del sistema</span>
