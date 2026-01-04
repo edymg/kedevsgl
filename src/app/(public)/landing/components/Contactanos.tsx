@@ -28,16 +28,15 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="w-full flex justify-center font-montserrat">
+    <div className="w-full flex justify-center font-montserrat h-full">
       <section
-        className="relative overflow-hidden shadow-xl md:rounded-lg bg-gradient-to-b from-[#0b1e2e] via-[#112240] to-[#0a192f] w-full max-w-6xl mx-auto py-10 sm:py-12 px-4 sm:px-8 md:px-12"
+        className="relative shadow-xl md:rounded-lg bg-gradient-to-b from-[#0b1e2e] via-[#112240] to-[#0a192f] w-full sm:max-w-6xl mx-auto py-10 sm:py-12 px-3 sm:px-8 md:px-12 h-full"
         id="Forms"
       >
         <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]" />
 
-        <div className="absolute h-96 w-96 -top-48 -left-48 bg-purple-500/20 rounded-full blur-3xl" />
-        <div className="absolute h-96 w-96 -bottom-48 -right-48 bg-emerald-500/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0a192f] to-transparent"></div>
+        <div className="absolute h-96 sm:w-96 -top-48 -left-48 bg-purple-500/20 rounded-full blur-3xl" />
+        <div className="absolute h-96 sm:w-96 -bottom-48 -right-48 bg-emerald-500/20 rounded-full blur-3xl" />
 
         <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="flex flex-col justify-center space-y-6 md:space-y-4">
@@ -105,7 +104,7 @@ export default function ContactForm() {
               >
                 Llevemos tu negocio&nbsp;a lo más alto:
               </motion.h2>
-              <div className="bg-white/90 backdrop-blur-sm w-full p-6 sm:p-8 rounded-lg border border-gray-200 shadow-lg">
+              <div className="bg-white/90 backdrop-blur-sm w-full rounded-lg border border-gray-200 shadow-lg">
                 <Formulary />
               </div>
             </motion.div>

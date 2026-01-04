@@ -57,7 +57,10 @@ export default function Formulary() {
   };
 
   return (
-    <div id="contact" className="md:px-3 py-6 sm:py-4 md:scroll-mt-[130px]">
+    <div
+      id="contact"
+      className="px-4 md:px-6 py-6 sm:py-4 scroll-mt-12 md:scroll-mt-28"
+    >
       <FormProvider {...methods}>
         <form
           onSubmit={handleSubmit(onSubmit)}
