@@ -1,0 +1,1 @@
+export const NUMBER_WSP = 51988900827;

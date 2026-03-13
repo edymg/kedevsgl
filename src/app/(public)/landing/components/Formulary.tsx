@@ -16,6 +16,7 @@ import {
 import { RHFAutocomplete } from "@/components/ui/Autocomplete";
 import { RHFTextField } from "@/components/ui/TextField";
 import { RHFSwitch } from "@/components/ui/Switch";
+import { NUMBER_WSP } from "@/app/constants/company";
 
 export default function Formulary() {
   const methods = useForm({
@@ -42,7 +43,7 @@ export default function Formulary() {
     ];
 
     const message = encodeURIComponent(lines.join("\n"));
-    const whatsappURL = `https://wa.me/${process.env.NEXT_PUBLIC_NUMBER_WSP}?text=${message}`;
+    const whatsappURL = `https://wa.me/${NUMBER_WSP}?text=${message}`;
 
     window.open(whatsappURL, "_blank");
   };
@@ -58,7 +59,7 @@ export default function Formulary() {
           ?.label || data.systemStage,
       relationPartner:
         relationPartner.find(
-          (_, index) => String(index) === data.relationPartner
+          (_, index) => String(index) === data.relationPartner,
         )?.label || data.relationPartner,
     };
 
