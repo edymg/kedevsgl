@@ -8,7 +8,7 @@ export function BenefitsSection() {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            ¿Por qué trabajar con un partner técnico mensual?
+            ¿Por qué trabajar con un partner operativo mensual?
           </h2>
         </div>
         <div className="grid md:grid-cols-3 gap-8 mb-12">
@@ -28,10 +28,10 @@ export function BenefitsSection() {
         </div>
         <div className="bg-gradient-to-b from-[#0b1e2e] via-[#112240] to-[#0a192f] border rounded-2xl p-8 md:p-12 text-center">
           <p className="text-2xl md:text-3xl font-bold mb-4 text-balance text-white">
-            Tu software deja de ser un problema y se convierte en un activo
-            estratégico
+            Tu negocio empieza a funcionar con orden, control y procesos
+            automatizados
           </p>
-          <ButtonContactModal title="Agenda una evaluación técnica" />
+          <ButtonContactModal title="Agenda un diagnóstico gratuito" />
         </div>
       </div>
     </section>

@@ -1,32 +1,32 @@
 export const benefits = [
   {
     number: "1",
-    title: "Equipo completo",
-    description: "Por el costo de un solo programador",
+    title: "Control real",
+    description: "Sabes qué pasa en tu negocio en todo momento",
   },
   {
     number: "2",
-    title: "Continuidad garantizada",
-    description: "Sin depender de una sola persona",
+    title: "Sin dependencia",
+    description: "Procesos que no dependen de una sola persona",
   },
   {
     number: "3",
-    title: "Desiciones",
-    description: "Pensando en el negocio, no solo en lo técnico",
+    title: "Decisiones con datos",
+    description: "Información centralizada para tomar mejores decisiones",
   },
   {
     number: "4",
-    title: "Menos Errores",
-    description: "Menos riesgos",
+    title: "Menos errores",
+    description: "Procesos automatizados reducen errores humanos y pérdidas",
   },
   {
     number: "5",
-    title: "Crecimiento",
-    description: "Ordenado y predecible",
+    title: "Crecimiento ordenado",
+    description: "Escala tu negocio sin que las operaciones colapsen",
   },
   {
     number: "6",
-    title: "Activo estratégico",
-    description: "El sistema se convierte en un activo estratégico",
+    title: "Socio mensual",
+    description: "Mejoramos tus procesos de forma continua cada mes",
   },
 ];

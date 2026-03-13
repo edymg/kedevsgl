@@ -23,7 +23,7 @@ const reviews: Review[] = [
     company: "Hotel Enai",
     avatar: "https://randomuser.me/api/portraits/women/5.jpg",
     rating: 5,
-    text: "De perder el 30% de reservas por errores humanos a tener un sistema que gestiona todo automáticamente. ¡Cambió nuestro negocio!",
+    text: "Antes controlábamos todo en Excel y se nos perdían reservas. Hoy el negocio funciona con orden y cada mes mejoramos algo nuevo. ¡Cambió la operación por completo!",
   },
   {
     id: 2,
@@ -31,7 +31,7 @@ const reviews: Review[] = [
     company: "Movento S.A",
     avatar: "https://randomuser.me/api/portraits/men/1.jpg",
     rating: 5,
-    text: "Hoy tenemos control total de nuestra operación comercial. El sistema evoluciona cada mes sin depender de un solo programador.",
+    text: "Teníamos todo por WhatsApp y no sabíamos qué estaba pasando en el negocio. Hoy tenemos control total de clientes, pagos y trabajadores. El negocio creció con orden.",
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ const reviews: Review[] = [
     company: "Colegio Paraíso",
     avatar: "https://randomuser.me/api/portraits/women/4.jpg",
     rating: 4,
-    text: "Reportes que antes tomaban 3 días ahora se generan en 15 minutos. El equipo puede enfocarse en lo importante. La comunicación con los padres.",
+    text: "Operábamos manualmente y dependíamos de una sola persona. Ahora los procesos están automatizados y el equipo puede enfocarse en lo que realmente importa.",
   },
 ];
 

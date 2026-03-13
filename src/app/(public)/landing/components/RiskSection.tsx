@@ -7,21 +7,22 @@ import { cn } from "@/lib/utils";
 
 const risks = [
   {
-    title: "Riesgo operativo",
-    description: "Dependencia de una sola persona",
-    description2: "Si el desarrollador falla, el negocio se detiene",
+    title: "Pérdida de dinero",
+    description: "Errores en pagos y cobros manuales",
+    description2: "Clientes y ventas que se pierden sin seguimiento",
     color: "red",
   },
   {
-    title: "Crecimiento limitado",
-    description: "El sistema no acompaña el crecimiento del negocio",
-    description2: "Oportunidades que no se pueden aprovechar",
+    title: "Falta de control",
+    description: "Información dispersa en WhatsApp y Excel",
+    description2: "No sabes qué pasa realmente en tu negocio",
     color: "warnig",
   },
   {
-    title: "Falta de control",
-    description: "No existe un plan claro de evolución",
-    description2: "Las decisiones se toman por urgencia, no por estrategia",
+    title: "Crecimiento caótico",
+    description: "Más trabajo, más errores, más dependencia de personas",
+    description2:
+      "El negocio crece pero se vuelve más difícil de manejar",
     color: "warnig",
   },
 ];
@@ -38,8 +39,8 @@ export function RiskSection() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            Cuando un sistema se construye sin una visión clara, el negocio se
-            vuelve frágil
+            Cuando un negocio crece sin procesos claros, aparecen estos
+            problemas
           </motion.h2>
 
           <div className="flex flex-wrap gap-6 justify-center">

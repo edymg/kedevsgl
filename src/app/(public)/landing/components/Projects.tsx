@@ -44,13 +44,13 @@ export function Projects() {
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-3">
               <span className="text-accent">
-                Plataformas en Producción que confian en
+                Negocios que operan con orden y control gracias a
               </span>{" "}
               <AnimatedTitle title="Kedevs" color="primary" />
             </h2>
             <p className="text-[20px] text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              Empresas que operan con software crítico y evolucionan
-              continuamente con nuestro acompañamiento técnico.
+              Empresas que crecen sin caos operativo porque automatizaron y
+              ordenaron sus procesos con nuestro acompañamiento.
             </p>
           </div>
 

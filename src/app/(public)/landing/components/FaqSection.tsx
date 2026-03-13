@@ -48,52 +48,43 @@ export function FaqSection() {
               {[
                 {
                   value: "item-1",
-                  question: "¿Qué servicios ofrecemos?",
+                  question: "¿Qué hace exactamente KEDEVS?",
                   answer: (
                     <div className="space-y-4">
                       <div>
                         <h4 className="font-semibold text-[#00e64d]">
-                          Desarrollo SaaS Personalizado
+                          Ordenamos las operaciones del negocio
                         </h4>
                         <ul className="list-disc pl-5 mt-2 space-y-1">
                           <li>
-                            Plataformas cloud escalables desde MVP hasta
-                            enterprise
+                            Identificamos dónde el negocio pierde dinero y
+                            control por operar manualmente
                           </li>
                           <li>
-                            Arquitecturas multi-tenant listas para crecimiento
+                            Automatizamos procesos de clientes, pagos y
+                            trabajadores
                           </li>
                           <li>
-                            Integraciones API con ecosistemas empresariales
+                            Centralizamos la información del negocio en un solo
+                            lugar
                           </li>
                         </ul>
                       </div>
 
                       <div>
                         <h4 className="font-semibold text-[#00e64d]">
-                          Optimización de Procesos
+                          Trabajamos como partner operativo mensual
                         </h4>
                         <ul className="list-disc pl-5 mt-2 space-y-1">
-                          <li>Automatización de flujos de trabajo complejos</li>
-                          <li>Migración segura de legacy systems a la nube</li>
-                          <li>Implementación de inteligencia operacional</li>
-                        </ul>
-                      </div>
-
-                      <div>
-                        <h4 className="font-semibold text-[#00e64d]">
-                          Soporte Continuo
-                        </h4>
-                        <ul className="list-disc pl-5 mt-2 space-y-1">
-                          <li>Monitoreo 24/7 con alertas proactivas</li>
-                          <li>Actualizaciones automáticas sin downtime</li>
-                          <li>Escalado de recursos bajo demanda</li>
+                          <li>Cada mes mejoramos y automatizamos nuevos procesos</li>
+                          <li>No vendemos proyectos únicos ni trabajos puntuales</li>
+                          <li>Acompañamos el crecimiento del negocio de forma continua</li>
                         </ul>
                       </div>
 
                       <p className="pt-2 text-sm italic">
-                        Todos nuestros servicios incluyen análisis de datos en
-                        tiempo real y reportes de ROI mensurables.
+                        Nuestro objetivo es que tu negocio pueda crecer sin
+                        caos operativo y con control real en todo momento.
                       </p>
                     </div>
                   ),
@@ -120,16 +111,16 @@ export function FaqSection() {
                 },
                 {
                   value: "item-3",
-                  question: "¿Tienen garantía en sus servicios?",
+                  question: "¿Cómo funciona el servicio mensual?",
                   answer: (
                     <div className="space-y-3">
                       <p>
                         <span className="font-semibold text-[#00e64d]">
-                          Garantía de Rendimiento:
+                          Modelo de partner operativo:
                         </span>{" "}
-                        Si tu plataforma no cumple con los KPIs acordados,
-                        realizamos mejoras gratuitas hasta alcanzar los
-                        resultados prometidos.
+                        Trabajamos con tu negocio de forma continua. Cada mes
+                        definimos qué procesos ordenar y automatizar para que
+                        sientas resultados concretos.
                       </p>
 
                       <div className="flex items-start mt-3">
@@ -138,18 +129,18 @@ export function FaqSection() {
                         </div>
                         <div>
                           <span className="font-medium">
-                            Periodo de gracia:
+                            Inversión mínima:
                           </span>{" "}
-                          30 días de soporte prioritario post-implementación sin
-                          costo adicional
+                          $1,000 USD mensuales. Trabajamos con pocos clientes
+                          para garantizar resultados reales.
                         </div>
                       </div>
 
                       <div className="pt-2">
                         <p className="text-sm italic">
-                          *Los términos específicos varían según el plan
-                          contratado. Incluimos cláusulas de confidencialidad y
-                          ownership de código en todos nuestros contratos.
+                          *Ordenar y automatizar un negocio no es un proyecto
+                          puntual. Es un proceso continuo que trabajamos mes a
+                          mes junto a ti.
                         </p>
                       </div>
                     </div>

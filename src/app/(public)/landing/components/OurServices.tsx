@@ -15,8 +15,9 @@ const OurServices = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true }}
       >
-        Tu <span className="text-[#10B981]">Sistema</span> no es un gasto, es el
-        activo principal de tu <span className="text-[#10B981]">Negocio</span>
+        Tu <span className="text-[#10B981]">negocio crece</span>, pero sigue
+        operando como si fuera{" "}
+        <span className="text-[#10B981]">pequeño</span>
       </motion.h2>
       <div className="flex flex-col gap-4 sm:gap-8">
         <RiskSection />

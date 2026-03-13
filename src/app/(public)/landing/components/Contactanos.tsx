@@ -47,7 +47,7 @@ export default function ContactForm() {
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
-              Consultoría técnica estratégica{" "}
+              Diagnostico de tu negocio{" "}
               <AnimatedTitle title="(sin costo)" className="mt-2" />
             </motion.h2>
             <motion.div
@@ -66,23 +66,23 @@ export default function ContactForm() {
               transition={{ duration: 0.5, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <h2 className="font-bold mb-2">Es una conversación donde:</h2>
+              <h2 className="font-bold mb-2">Es una conversacion donde:</h2>
               <ul>
-                {renderIconOnline("Evaluamos el estado de tu software")}
-                {renderIconOnline("Identificamos riesgos y puntos críticos")}
+                {renderIconOnline("Analizamos como operas tu negocio hoy")}
+                {renderIconOnline("Identificamos donde pierdes dinero y control")}
                 {renderIconOnline(
-                  "Definimos si necesitas un sistema nuevo o una reconstrucción completa"
+                  "Definimos que procesos ordenar y automatizar primero"
                 )}
                 {renderIconOnline(
-                  "Evaluamos si KEDEVS es el partner adecuado para acompañarte"
+                  "Evaluamos si KEDEVS es el partner adecuado para tu negocio"
                 )}
               </ul>
 
-              <h2 className="mt-4 font-bold">Definimos el mejor camino:</h2>
+              <h2 className="mt-4 font-bold">Al terminar tendras claro:</h2>
               <ul>
                 <li>
                   {renderIconOnline(
-                    "Acompañamiento mensual continuo o fase inicial de implementación + mensualidad"
+                    "Que procesos de tu negocio necesitan ordenarse y automatizarse para crecer con control"
                   )}
                 </li>
               </ul>
@@ -102,7 +102,7 @@ export default function ContactForm() {
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
               >
-                Llevemos tu negocio&nbsp;a lo más alto:
+                Cuentanos sobre tu negocio:
               </motion.h2>
               <div className="bg-white/90 backdrop-blur-sm w-full rounded-lg border border-gray-200 shadow-lg">
                 <Formulary />

@@ -26,8 +26,22 @@ export default function Formulary() {
   const { handleSubmit, reset } = methods;
 
   const sendMessageWsp = (data: Schema) => {
-    const message = `Hola *Kedevs*!%0A%0AMe gustaría agendar una consultoría técnica estratégica.%0A%0A*• Nombre*: \`${data.fullname}\`%0A*• Correo*: ${data.emailCompany}%0A*• Empresa*: \`${data.nameCompany}\`%0A*• ¿Cómo genera ingresos actualmente tu empresa?:* \`${data.generateIncome}\`%0A*• ¿En qué etapa se encuentra tu plataforma o sistema?:* \`${data.systemStage}\`%0A*• ¿Qué tipo de relación buscas con tu partner tecnológico?*: \`${data.relationPartner}\`%0A%0AQuedo atento a su respuesta. ¡Gracias!`;
+    const lines = [
+      `Hola *Kedevs*!`,
+      ``,
+      `Me gustaria agendar un diagnostico de mi negocio.`,
+      ``,
+      `*Nombre:* ${data.fullname}`,
+      `*Correo:* ${data.emailCompany}`,
+      `*Empresa:* ${data.nameCompany}`,
+      `*Como controlan actualmente a sus clientes?* ${data.generateIncome}`,
+      `*Cual es la situacion actual del negocio?* ${data.systemStage}`,
+      `*Que problema operativo quieren resolver?* ${data.relationPartner}`,
+      ``,
+      `Quedo atento a su respuesta. Gracias!`,
+    ];
 
+    const message = encodeURIComponent(lines.join("\n"));
     const whatsappURL = `https://wa.me/${process.env.NEXT_PUBLIC_NUMBER_WSP}?text=${message}`;
 
     window.open(whatsappURL, "_blank");
@@ -69,7 +83,7 @@ export default function Formulary() {
           className="space-y-2"
         >
           <h2 className="text-2xl font-semibold text-center text-turqueza-letter-light capitalize pb-1">
-            !Agendar consultoría técnica estratégica¡
+            ¡Agenda un diagnóstico de tu negocio!
           </h2>
 
           <Stack spacing={1} className="grid grid-cols-1 md:grid-cols-2">
@@ -96,7 +110,7 @@ export default function Formulary() {
                 sx={{ display: "block", margin: "2px 0 2px 0" }}
                 className="text-gray-500 dark:text-gray-300"
               >
-                ¿Cómo genera ingresos actualmente tu empresa?
+                ¿Cómo controlan actualmente a sus clientes?
               </Typography>
               <RHFAutocomplete<Schema>
                 name="generateIncome"
@@ -116,7 +130,7 @@ export default function Formulary() {
                 sx={{ display: "block", margin: "2px 0 2px 0" }}
                 className="text-gray-500 dark:text-gray-300"
               >
-                ¿En qué etapa se encuentra tu plataforma o sistema?
+                ¿Cuál es la situación actual de tu negocio?
               </Typography>
               <RHFAutocomplete<Schema>
                 name="systemStage"
@@ -136,7 +150,7 @@ export default function Formulary() {
                 sx={{ display: "block", margin: "2px 0 2px 0" }}
                 className="text-gray-500 dark:text-gray-300"
               >
-                ¿Qué tipo de relación buscas con tu partner tecnológico?
+                ¿Qué problema operativo quieres resolver?
               </Typography>
               <RHFAutocomplete<Schema>
                 name="relationPartner"
@@ -180,7 +194,7 @@ export default function Formulary() {
             >
               {" "}
               <span className="relative z-10 font-bold drop-shadow-sm text-white">
-                Solicitar evaluación técnica
+                Agendar diagnóstico gratuito
               </span>
             </Button>
           </Stack>

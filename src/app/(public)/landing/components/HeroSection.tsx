@@ -33,22 +33,21 @@ const HeroSection = () => {
       <div className="z-50 text-center h-full flex flex-col justify-center items-center max-w-5xl mb-8 mx-2 lg:mx-0">
         <LogoHorizontal />
         <h1 className="text-3xl md:text-6xl font-bold mt-4 sm:mt-16">
-          Cuando tu <AnimatedTitle title="Negocio" color="secondary" /> depende
-          de un Sistema, No puedes{" "}
-          <AnimatedTitle title="Improvisar" color="secondary" />
+          Tu negocio está creciendo. Pero internamente es un{" "}
+          <AnimatedTitle title="Caos" color="secondary" />
         </h1>
         <p className="text-lg mt-4 hidden sm:block">
-          Kedevs es tu partner técnico mensual para crear y hacer crecer
-          sistemas desde cero que sostienen la operación y las ventas de tu
-          negocio.
+          Kedevs es tu partner operativo mensual. Ordenamos, automatizamos y
+          controlamos los procesos de tu negocio para que puedas crecer sin
+          perder el control.
         </p>
         <p className="text-lg mt-4 block sm:hidden">
-          El partner técnico mensual para construir y hacer crecer tu sistema
-          como el corazón de tu negocio
+          Tu partner operativo mensual para ordenar y automatizar tu negocio y
+          crecer sin caos
         </p>
 
         <div className="mt-6">
-          <ButtonContactModal title="Reactiva y escala tu software" />
+          <ButtonContactModal title="Diagnostica tu negocio" />
         </div>
 
         <div className="flex justify-center items-center gap-2 mt-8">
@@ -58,15 +57,15 @@ const HeroSection = () => {
         <div className="w-full flex flex-col md:flex-row gap-6 items-center justify-center pt-8 text-sm">
           <div className="flex items-center gap-2">
             <CheckCircle className="w-5 h-5 text-[#10B981]" />
-            <span>Evolución constante del sistema</span>
+            <span>Procesos automatizados mes a mes</span>
           </div>
           <div className="flex items-center gap-2 text-muted-foreground">
             <CheckCircle className="w-5 h-5 text-[#10B981]" />
-            <span>Plan claro de crecimiento (roadmap)</span>
+            <span>Control total del negocio</span>
           </div>
           <div className="flex items-center gap-2 text-muted-foreground">
             <CheckCircle className="w-5 h-5 text-[#10B981]" />
-            <span>Control, estabilidad y orden</span>
+            <span>Crecimiento sin caos operativo</span>
           </div>
         </div>
       </div>

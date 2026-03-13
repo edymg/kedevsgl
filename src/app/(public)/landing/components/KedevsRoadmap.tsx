@@ -10,12 +10,12 @@ export function KedevsRoadmap() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-balance">
-            Todo comienza con un{" "}
-            <span className="text-green-letter italic">Plan Claro</span>
+            Todo comienza con entender{" "}
+            <span className="text-green-letter italic">tu negocio</span>
           </h2>
           <p className="text-gray-700 text-lg max-w-2xl mx-auto text-pretty">
-            Sin un plan claro, cualquier sistema termina fallando. Diseñamos el
-            roadmap correcto desde el primer día.
+            Sin entender cómo opera tu negocio, cualquier solución fracasa.
+            Primero entendemos, luego automatizamos.
           </p>
         </div>
 
@@ -27,21 +27,21 @@ export function KedevsRoadmap() {
               icon: Map,
               title: "Entendemos el negocio",
               description:
-                "Analizamos cómo ganas dinero y cuáles son tus objetivos reales antes de escribir una sola línea de código.",
+                "Analizamos cómo gestionas clientes, pagos y trabajadores. Identificamos dónde se pierde dinero y control.",
               step: "01",
             },
             {
               icon: Code2,
-              title: "Diseño del sistema",
+              title: "Diseñamos el plan operativo",
               description:
-                "Arquitectura sólida pensada para escalar. Elegimos las herramientas adecuadas para tu caso específico.",
+                "Definimos qué procesos ordenar y automatizar primero para que sientas resultados rápido.",
               step: "02",
             },
             {
               icon: LineChart,
-              title: "Plan de crecimiento",
+              title: "Mejora continua cada mes",
               description:
-                "Definimos etapas de evolución constantes para que tu sistema nunca se quede atrás.",
+                "Cada mes automatizamos nuevas partes de tu negocio. El orden y control crecen junto a tu empresa.",
               step: "03",
             },
           ].map((item, i) => (
