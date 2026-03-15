@@ -1,8 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import { FormProvider, useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button, Stack, Typography } from "@mui/material";
+import { toast } from "sonner";
 
 import {
   schema,
@@ -19,6 +21,8 @@ import { RHFSwitch } from "@/components/ui/Switch";
 import { NUMBER_WSP } from "@/app/constants/company";
 
 export default function Formulary() {
+  const [showExtraFields, setShowExtraFields] = useState(false);
+
   const methods = useForm({
     resolver: zodResolver(schema),
     defaultValues,
@@ -35,9 +39,9 @@ export default function Formulary() {
       `*Nombre:* ${data.fullname}`,
       `*Correo:* ${data.emailCompany}`,
       `*Empresa:* ${data.nameCompany}`,
-      `*Como controlan actualmente a sus clientes?* ${data.generateIncome}`,
+      `*Como controlan la informacion del negocio?* ${data.generateIncome}`,
       `*Cual es la situacion actual del negocio?* ${data.systemStage}`,
-      `*Que problema operativo quieren resolver?* ${data.relationPartner}`,
+      `*El negocio ya genera ingresos de forma constante?* ${data.relationPartner}`,
       ``,
       `Quedo atento a su respuesta. Gracias!`,
     ];
@@ -49,6 +53,13 @@ export default function Formulary() {
   };
 
   const onSubmit: SubmitHandler<Schema> = async (data) => {
+    const isNonPotentialClient = data.relationPartner === "2";
+
+    if (isNonPotentialClient && !showExtraFields) {
+      setShowExtraFields(true);
+      return;
+    }
+
     const formattedData = {
       ...data,
       generateIncome:
@@ -64,10 +75,27 @@ export default function Formulary() {
     };
 
     try {
-      sendMessageWsp(formattedData);
-      reset();
+      if (isNonPotentialClient) {
+        await fetch("/api/send-email", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formattedData),
+        });
+        reset();
+        setShowExtraFields(false);
+        toast.success("¡Mensaje enviado! Pronto nos pondremos en contacto.", {
+          duration: 3000,
+          onAutoClose: () =>
+            window.open("https://www.instagram.com/kedevs/", "_blank"),
+        });
+      } else {
+        sendMessageWsp(formattedData);
+        reset();
+        setShowExtraFields(false);
+      }
     } catch (error) {
       console.error("Email sending from contacts failed:", error);
+      toast.error("Ocurrió un error al enviar. Intenta nuevamente.");
     }
   };
 
@@ -111,7 +139,7 @@ export default function Formulary() {
                 sx={{ display: "block", margin: "2px 0 2px 0" }}
                 className="text-gray-500 dark:text-gray-300"
               >
-                ¿Cómo controlan actualmente a sus clientes?
+                Actualmente, ¿cómo controlan la información del negocio?
               </Typography>
               <RHFAutocomplete<Schema>
                 name="generateIncome"
@@ -151,7 +179,7 @@ export default function Formulary() {
                 sx={{ display: "block", margin: "2px 0 2px 0" }}
                 className="text-gray-500 dark:text-gray-300"
               >
-                ¿Qué problema operativo quieres resolver?
+                ¿Tu negocio ya genera ingresos de forma constante?
               </Typography>
               <RHFAutocomplete<Schema>
                 name="relationPartner"
@@ -189,13 +217,44 @@ export default function Formulary() {
                 </span>
               }
             />
+
+            {showExtraFields && (
+              <>
+                <div className="md:col-span-2">
+                  <Typography
+                    variant="body2"
+                    fontSize="17px"
+                    color="info"
+                    sx={{ display: "block", margin: "2px 0 2px 0" }}
+                    className="text-gray-500 dark:text-gray-300 w-full"
+                  >
+                    Cuéntanos un poco más sobre tu negocio
+                  </Typography>
+                  <RHFTextField<Schema>
+                    name="description"
+                    label="Descripción"
+                    placeholder="¿Qué hace tu negocio? ¿Cuál es tu principal reto ahora mismo?"
+                    multiline
+                    rows={3}
+                    fullWidth
+                  />
+                </div>
+                <RHFTextField<Schema>
+                  name="whatsappNumber"
+                  label="Número de WhatsApp"
+                  placeholder="Ej: +51 999 999 999"
+                />
+              </>
+            )}
+
             <Button
               type="submit"
               className="group bg-gradient-to-r from-emerald-500 to-emerald-700 hover:from-emerald-600 hover:to-emerald-800 font-bold uppercase"
             >
-              {" "}
               <span className="relative z-10 font-bold drop-shadow-sm text-white">
-                Agendar diagnóstico gratuito
+                {showExtraFields
+                  ? "Confirmar y enviar"
+                  : "Agendar diagnóstico gratuito"}
               </span>
             </Button>
           </Stack>

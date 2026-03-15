@@ -1,4 +1,4 @@
-import { EmailTemplate } from "@/components/ui/EmailTemplate";
+import { FormularyEmailTemplate } from "@/app/components/FormularyEmailTemplate";
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
@@ -28,17 +28,16 @@ export async function POST(req: Request) {
     const { data, error } = await resend.emails.send({
       from: "Kedevs Contactando <onboarding@resend.dev>",
       to: ["kedevs.pe@gmail.com"],
-      subject: `Nuevo mensaje de ${body.fullname}`,
-      react: EmailTemplate({
+      subject: `[Lead Formulario] ${body.fullname} - ${body.nameCompany || "Sin empresa"}`,
+      react: FormularyEmailTemplate({
         fullname: body.fullname || "",
         emailCompany: body.emailCompany || "",
-        countries: body.countries || "",
-        phone: body.phone || "",
         nameCompany: body.nameCompany || "",
         generateIncome: body.generateIncome || "",
         systemStage: body.systemStage || "",
         relationPartner: body.relationPartner || "",
-        aceptaTerms: Boolean(body.aceptaTerms),
+        description: body.description || "",
+        whatsappNumber: body.whatsappNumber || "",
       }),
     });
 

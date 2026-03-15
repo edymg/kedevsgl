@@ -3,8 +3,8 @@ import { z } from "zod";
 import { patterns } from "../constants";
 
 export const generateIncome = [
-  { id: "1", label: "Con Excel o WhatsApp" },
-  { id: "2", label: "Con un sistema parcial o básico" },
+  { id: "1", label: "Excel + WhatsApp" },
+  { id: "2", label: "Algunos procesos organizados pero mucho sigue manual" },
   { id: "3", label: "No tenemos un control definido" },
 ] as const;
 
@@ -16,27 +16,21 @@ export const systemStage = [
   },
   {
     id: "2",
-    label:
-      "Tenemos varios trabajadores y la operación depende de pocas personas",
-  },
-  {
-    id: "3",
     label: "Perdemos información, clientes o cobros por falta de orden",
   },
-  { id: "4", label: "Apenas estamos comenzando a crecer" },
+  { id: "3", label: "Apenas estamos comenzando a crecer" },
 ];
 
 export const relationPartner = [
-  { id: "1", label: "Controlar mejor a mis clientes y ventas" },
+  { id: "1", label: "Sí, el negocio ya genera ingresos estables todos los meses" },
   {
     id: "2",
-    label: "Ordenar los pagos y cobros del negocio",
+    label: "Sí, pero los ingresos aún son variables",
   },
   {
     id: "3",
-    label: "Controlar a mis trabajadores y operaciones",
+    label: "Estamos comenzando y aún no hay ingresos constantes",
   },
-  { id: "4", label: "Centralizar toda la información del negocio" },
 ];
 
 export const schema = z.object({
@@ -58,6 +52,8 @@ export const schema = z.object({
   aceptaTerms: z.boolean().refine((v) => v === true, {
     message: "Debes aceptar los términos",
   }),
+  description: z.string().optional(),
+  whatsappNumber: z.string().optional(),
 });
 
 export type Schema = z.infer<typeof schema>;
@@ -70,4 +66,6 @@ export const defaultValues: Schema = {
   systemStage: "",
   relationPartner: "",
   aceptaTerms: false,
+  description: "",
+  whatsappNumber: "",
 };

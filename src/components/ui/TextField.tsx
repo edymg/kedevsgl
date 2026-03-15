@@ -6,7 +6,7 @@ type Props<T extends FieldValues> = {
   className?: string;
   placeholder?: string;
   multiline?: boolean;
-} & Pick<TextFieldProps, "label" | "placeholder" | "multiline" | "rows">;
+} & Pick<TextFieldProps, "label" | "placeholder" | "multiline" | "rows" | "fullWidth">;
 
 export function RHFTextField<T extends FieldValues>({
   name,
